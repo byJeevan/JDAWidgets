@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04870E9124667C5400FCFFF0 /* HeaderTabsTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04870E9024667C5400FCFFF0 /* HeaderTabsTestVC.swift */; };
+		04870E9524667D2300FCFFF0 /* HorizontalHeaderTabsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04870E9224667D2300FCFFF0 /* HorizontalHeaderTabsCell.swift */; };
+		04870E9624667D2300FCFFF0 /* InnerTabPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04870E9324667D2300FCFFF0 /* InnerTabPageViewController.swift */; };
+		04870E9724667D2300FCFFF0 /* HorizontalTabsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04870E9424667D2300FCFFF0 /* HorizontalTabsViewController.swift */; };
 		0925A5B0244B8455004FD808 /* FloatingTextFieldTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0925A5AF244B8455004FD808 /* FloatingTextFieldTestVC.swift */; };
 		0925A5B2244B88BD004FD808 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0925A5B1244B88BD004FD808 /* Extensions.swift */; };
 		0925A5B6244C0F5B004FD808 /* NumberPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0925A5B5244C0F5B004FD808 /* NumberPadView.swift */; };
@@ -24,6 +28,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04870E9024667C5400FCFFF0 /* HeaderTabsTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HeaderTabsTestVC.swift; path = "../../../../Refactoring_original/ios-selfcare/MyAirtel/HeaderTabsTestVC.swift"; sourceTree = "<group>"; };
+		04870E9224667D2300FCFFF0 /* HorizontalHeaderTabsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalHeaderTabsCell.swift; sourceTree = "<group>"; };
+		04870E9324667D2300FCFFF0 /* InnerTabPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnerTabPageViewController.swift; sourceTree = "<group>"; };
+		04870E9424667D2300FCFFF0 /* HorizontalTabsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalTabsViewController.swift; sourceTree = "<group>"; };
 		0925A5AF244B8455004FD808 /* FloatingTextFieldTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTextFieldTestVC.swift; sourceTree = "<group>"; };
 		0925A5B1244B88BD004FD808 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		0925A5B5244C0F5B004FD808 /* NumberPadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberPadView.swift; sourceTree = "<group>"; };
@@ -53,6 +61,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04870E8F24667C2100FCFFF0 /* Top Header Pages */ = {
+			isa = PBXGroup;
+			children = (
+				04870E9224667D2300FCFFF0 /* HorizontalHeaderTabsCell.swift */,
+				04870E9424667D2300FCFFF0 /* HorizontalTabsViewController.swift */,
+				04870E9324667D2300FCFFF0 /* InnerTabPageViewController.swift */,
+				04870E9024667C5400FCFFF0 /* HeaderTabsTestVC.swift */,
+			);
+			path = "Top Header Pages";
+			sourceTree = "<group>";
+		};
 		0925A5B3244B8F52004FD808 /* Card View */ = {
 			isa = PBXGroup;
 			children = (
@@ -104,7 +123,7 @@
 		09D74A882444E1E400280E54 /* Widgets */ = {
 			isa = PBXGroup;
 			children = (
-				09D74A762444E00D00280E54 /* AppDelegate.swift */,
+				04870E8F24667C2100FCFFF0 /* Top Header Pages */,
 				0925A5B4244C0F42004FD808 /* Amount Pad */,
 				09FF231F244B7D79000A298D /* Floating Textfield */,
 				0925A5B3244B8F52004FD808 /* Card View */,
@@ -115,6 +134,7 @@
 		09D74A892444E1F400280E54 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				09D74A762444E00D00280E54 /* AppDelegate.swift */,
 				09D74A7A2444E00D00280E54 /* Main.storyboard */,
 				09D74A7D2444E00E00280E54 /* Assets.xcassets */,
 				09D74A7F2444E00E00280E54 /* LaunchScreen.storyboard */,
@@ -206,10 +226,14 @@
 			files = (
 				09D74A792444E00D00280E54 /* OptionsViewController.swift in Sources */,
 				0925A5B0244B8455004FD808 /* FloatingTextFieldTestVC.swift in Sources */,
+				04870E9724667D2300FCFFF0 /* HorizontalTabsViewController.swift in Sources */,
+				04870E9524667D2300FCFFF0 /* HorizontalHeaderTabsCell.swift in Sources */,
 				0925A5B6244C0F5B004FD808 /* NumberPadView.swift in Sources */,
 				0925A5BA244C24B7004FD808 /* AmountPadViewController.swift in Sources */,
 				09D74A8B2444E31800280E54 /* WidgetCardViewController.swift in Sources */,
+				04870E9124667C5400FCFFF0 /* HeaderTabsTestVC.swift in Sources */,
 				09D74A772444E00D00280E54 /* AppDelegate.swift in Sources */,
+				04870E9624667D2300FCFFF0 /* InnerTabPageViewController.swift in Sources */,
 				09FF2321244B7D9B000A298D /* FloatingTextField.swift in Sources */,
 				0925A5B8244C1018004FD808 /* GridStackView.swift in Sources */,
 				0925A5B2244B88BD004FD808 /* Extensions.swift in Sources */,

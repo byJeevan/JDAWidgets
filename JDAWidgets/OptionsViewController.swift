@@ -13,6 +13,8 @@ enum WidgetType:String, CaseIterable {
     case cardView = "Card View in ViewController"
     case floatingTextField = "Floating Label Text Field"
     case numberPad = "On screen number pad"
+    case topHeaderPage = "Top Header Tabs"
+
 }
 
 class OptionViewController: UIViewController {
@@ -36,6 +38,9 @@ class OptionViewController: UIViewController {
         case .numberPad:
             let vc:AmountPadViewController = AmountPadViewController.instantiate(xibName: "AmountPadViewController")
             self.navigationController?.pushViewController(vc, animated: true)
+            break
+        case .topHeaderPage :
+            self.navigationController?.pushViewController(HeaderTabsTestVC(), animated: true)
             break
         }
     }

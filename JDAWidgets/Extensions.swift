@@ -27,4 +27,65 @@ extension UIViewController {
     static func instantiate<TController: UIViewController>(xibName: String? = nil) -> TController {
         return TController(nibName: xibName ?? String(describing: self), bundle: Bundle(for: self))
     }
+    
+}
+
+ extension UIViewController {
+     func add(_ child: UIViewController) {
+        addChild(child)
+         view.addSubview(child.view)
+        child.didMove(toParent: self)
+     }
+     
+     func remove() {
+         // Just to be safe, we check that this view controller
+         // is actually added to a parent before removing it.
+         guard parent != nil else {
+             return
+         }
+         
+        willMove(toParent: nil)
+         view.removeFromSuperview()
+        removeFromParent()
+     }
+ }
+
+extension UIView {
+    
+    func addTopBorderWithColor(color: UIColor, width: CGFloat) {
+        let border = CALayer()
+        border.backgroundColor = color.cgColor
+        border.frame = CGRect(x: 0, y: 0, width: self.frame.size.width, height: width)
+        self.layer.addSublayer(border)
+        self.layer.masksToBounds = true
+
+    }
+    
+    func addRightBorderWithColor(color: UIColor, width: CGFloat) {
+        let border = CALayer()
+        border.backgroundColor = color.cgColor
+        border.frame = CGRect(x: self.frame.size.width - width, y: 0, width: width, height: self.frame.size.height)
+        self.layer.addSublayer(border)
+        self.layer.masksToBounds = true
+
+    }
+    
+    func addBottomBorderWithColor(color: UIColor, width: CGFloat) {
+        let border = CALayer()
+        border.backgroundColor = color.cgColor
+        border.frame = CGRect(x: 0, y: self.frame.size.height - width,
+                              width: self.frame.size.width, height: width)
+        self.layer.addSublayer(border)
+        self.layer.masksToBounds = true
+
+    }
+    
+    func addLeftBorderWithColor(color: UIColor, width: CGFloat) {
+        let border = CALayer()
+        border.backgroundColor = color.cgColor
+        border.frame = CGRect(x: 0, y: 0, width: width, height: self.frame.size.height)
+        self.layer.addSublayer(border)
+        self.layer.masksToBounds = true
+
+    }
 }
