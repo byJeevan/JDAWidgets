@@ -1,11 +1,18 @@
 # JDAWidgets
-Widgets are Swift components that I used in day-to-day iOS Dev life.
-
+📦 Collection of Widgets(Swift components) kept for easy & faster dev life.
 Table discloses following functions in order 
 
-##1. Card Layout view
-Take away : 
+##### 1. Card Layout view
 - Card view UI extension
 - Extended Layout will avoid overlapping navigation bar over UIView subviews.
 
-##2. Floating lable text field
+##### 2. Floating lable text field
+- TextField packaged with Floating Label (Top) & Error Label (Bottom) 
+
+##### 3. In-screen number keypad
+- Composes final result as amount for example : "$ 199110.16"
+- Supported Decimal points.
+
+##### 4. Top Header tabs - Pagination
+- Customizable generic tabs packaged with Icon & Text (Uses collection view)
+- Synchronized tabs & pages
