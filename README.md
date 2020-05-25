@@ -9,8 +9,8 @@ Table discloses following functions in order
 ##### 2. Floating lable text field
 - TextField packaged with Floating Label (Top) & Error Label (Bottom) 
 
-##### 3. In-screen number keypad
-- Composes final result as amount for example : "$ 199110.16"
+##### 3. On-screen number keypad
+- Composes final result as amount. For Ex: "$199110.16"
 - Supported Decimal points.
 
 ##### 4. Top Header tabs - Pagination
