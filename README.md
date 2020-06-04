@@ -16,3 +16,6 @@ Table discloses following functions in order
 ##### 4. Top Header tabs - Pagination
 - Customizable generic tabs packaged with Icon & Text (Uses collection view)
 - Synchronized tabs & pages
+
+##### 5. Lazy loading table view cell
+- When the huge data split into chunks, user pull-up table to load data part by part.
