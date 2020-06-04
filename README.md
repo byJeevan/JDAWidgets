@@ -20,3 +20,4 @@
 ##### 5. Lazy loading table view cell
 - When the huge data split into chunks, user pull-up table to load data part by part.
 
+![Screenshot](https://github.com/byJeevan/JDAWidgets/blob/master/Simulator%20Screen%20Shot%20-%20iPhone%208%20-%202020-06-05%20at%2000.01.17.png?raw=true "Preview")
