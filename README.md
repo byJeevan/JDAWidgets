@@ -1,6 +1,6 @@
 # JDAWidgets
 📦 Collection of Widgets(Swift components) kept for easy & faster dev life.
-Table discloses following functions in order 
+- Table discloses following functions in order :
 
 ##### 1. Card Layout view
 - Card view UI extension
