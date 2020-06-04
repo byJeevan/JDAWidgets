@@ -14,6 +14,7 @@ enum WidgetType:String, CaseIterable {
     case floatingTextField = "Floating Label Text Field"
     case numberPad = "On screen number pad"
     case topHeaderPage = "Top Header Tabs"
+    case paginationTableView = "Pagination Tableview"
 
 }
 
@@ -42,6 +43,9 @@ class OptionViewController: UIViewController {
         case .topHeaderPage :
             self.navigationController?.pushViewController(HeaderTabsTestVC(), animated: true)
             break
+        case .paginationTableView:
+            self.navigationController?.pushViewController(LazyTableViewController(), animated: true)
+
         }
     }
     
