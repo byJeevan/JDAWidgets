@@ -1,6 +1,6 @@
 # JDAWidgets
-📦 Collection of Widgets(Swift components) kept for easy & faster dev life. Interstingly, there no third part framework or library involved. All these widgets stiched from native components with minimal amount of changes.
- List of items discloses following functions in order :
+📦 Collection of Widgets (Swift components) gathered for easy & faster developer life. Interstingly, there no third part framework or library involved. All these widgets stiched from native components with minimal amount of changes.
+List of items discloses following functions in order :
 
 ##### 1. Card Layout view
 - Card view UI extension
@@ -19,5 +19,9 @@
 
 ##### 5. Lazy loading table view cell
 - When the huge data split into chunks, user pull-up table to load data part by part.
+
+##### 6. Accordian/Expandable table view cell
+- A classic ui component that make use of section headers to Expandable/Collpase when user tapped.
+
 
 ![Screenshot](https://github.com/byJeevan/JDAWidgets/blob/master/Simulator%20Screen%20Shot%20-%20iPhone%208%20-%202020-06-05%20at%2000.01.17.png?raw=true "Preview")
