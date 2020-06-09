@@ -15,6 +15,7 @@ enum WidgetType:String, CaseIterable {
     case numberPad = "On screen number pad"
     case topHeaderPage = "Top Header Tabs"
     case paginationTableView = "Pagination Tableview"
+    case expandableTableView = "Expandable TableView"
 
 }
 
@@ -45,6 +46,9 @@ class OptionViewController: UIViewController {
             break
         case .paginationTableView:
             self.navigationController?.pushViewController(LazyTableViewController(), animated: true)
+
+        case .expandableTableView:
+            self.navigationController?.pushViewController(ExpandableTableViewController(), animated: true)
 
         }
     }
