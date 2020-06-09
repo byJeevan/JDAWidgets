@@ -14,6 +14,7 @@ class InnerTabPageViewController: UIPageViewController {
     private var index = 0
     public var viewcontroller = [UIViewController]()
     public var pageDelegate:CustomPageDelegate?
+    var isTransitioned = true
     
     var selectedIndex = 0 {
         didSet{
@@ -52,7 +53,7 @@ extension InnerTabPageViewController :  UIPageViewControllerDataSource, UIPageVi
         if self.index == 0 {
             return nil
         }
-        
+        if !self.isTransitioned { return nil }
         self.index = self.index-1;
         return self.viewcontroller[self.index]
     }
@@ -62,18 +63,26 @@ extension InnerTabPageViewController :  UIPageViewControllerDataSource, UIPageVi
             return nil
         }
         
+        if !self.isTransitioned { return nil }
+        
         self.index = self.index+1;
         return self.viewcontroller[self.index]
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool)
     {
-        if let firstViewController = viewControllers!.first,
-            let indexFirst = self.viewcontroller.firstIndex(of: firstViewController)
-        {
-            self.selectedIndex = indexFirst
-            pageDelegate?.changePageSelection(index: indexFirst)
+        
+        self.isTransitioned = completed
+        
+        if (completed) {
+            if let firstViewController = viewControllers!.first,
+                    let indexFirst = self.viewcontroller.firstIndex(of: firstViewController)
+                {
+                    self.selectedIndex = indexFirst
+                    pageDelegate?.changePageSelection(index: indexFirst)
+                }
         }
+    
     }
     
 }
