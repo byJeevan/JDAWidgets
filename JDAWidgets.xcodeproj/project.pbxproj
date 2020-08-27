@@ -13,12 +13,17 @@
 		042FF049248FBCE300D1B246 /* Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042FF048248FBCE300D1B246 /* Binding.swift */; };
 		042FF04B248FBE0200D1B246 /* ExpandableTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042FF04A248FBE0200D1B246 /* ExpandableTableViewModel.swift */; };
 		042FF04D248FC69100D1B246 /* CollapsibleTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042FF04C248FC69100D1B246 /* CollapsibleTableViewHeader.xib */; };
+		042FF059249099CA00D1B246 /* PagingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042FF04F249099CA00D1B246 /* PagingViewController.swift */; };
+		042FF05A249099CA00D1B246 /* MenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042FF050249099CA00D1B246 /* MenuItemView.swift */; };
+		042FF05C249099CA00D1B246 /* PagingMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042FF052249099CA00D1B246 /* PagingMenuController.swift */; };
+		042FF05D249099CA00D1B246 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042FF053249099CA00D1B246 /* MenuView.swift */; };
+		042FF05E249099CA00D1B246 /* MenuItemViewCustomizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042FF055249099CA00D1B246 /* MenuItemViewCustomizable.swift */; };
+		042FF05F249099CA00D1B246 /* Pagable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042FF056249099CA00D1B246 /* Pagable.swift */; };
+		042FF060249099CA00D1B246 /* MenuViewCustomizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042FF057249099CA00D1B246 /* MenuViewCustomizable.swift */; };
+		042FF061249099CA00D1B246 /* PagingMenuControllerCustomizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042FF058249099CA00D1B246 /* PagingMenuControllerCustomizable.swift */; };
 		0431171724896A8E00DB58EA /* LazyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0431171624896A8E00DB58EA /* LazyTableViewController.swift */; };
 		0431171924896AC700DB58EA /* LazyTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0431171824896AC700DB58EA /* LazyTableViewModel.swift */; };
-		04870E9124667C5400FCFFF0 /* HeaderTabsTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04870E9024667C5400FCFFF0 /* HeaderTabsTestVC.swift */; };
-		04870E9524667D2300FCFFF0 /* HorizontalHeaderTabsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04870E9224667D2300FCFFF0 /* HorizontalHeaderTabsCell.swift */; };
-		04870E9624667D2300FCFFF0 /* InnerTabPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04870E9324667D2300FCFFF0 /* InnerTabPageViewController.swift */; };
-		04870E9724667D2300FCFFF0 /* HorizontalTabsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04870E9424667D2300FCFFF0 /* HorizontalTabsViewController.swift */; };
+		04E5455F24F681A4009E4BFE /* TopHeaderTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E5455E24F681A4009E4BFE /* TopHeaderTestVC.swift */; };
 		0925A5B0244B8455004FD808 /* FloatingTextFieldTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0925A5AF244B8455004FD808 /* FloatingTextFieldTestVC.swift */; };
 		0925A5B2244B88BD004FD808 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0925A5B1244B88BD004FD808 /* Extensions.swift */; };
 		0925A5B6244C0F5B004FD808 /* NumberPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0925A5B5244C0F5B004FD808 /* NumberPadView.swift */; };
@@ -42,12 +47,17 @@
 		042FF048248FBCE300D1B246 /* Binding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Binding.swift; sourceTree = "<group>"; };
 		042FF04A248FBE0200D1B246 /* ExpandableTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableTableViewModel.swift; sourceTree = "<group>"; };
 		042FF04C248FC69100D1B246 /* CollapsibleTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollapsibleTableViewHeader.xib; sourceTree = "<group>"; };
+		042FF04F249099CA00D1B246 /* PagingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagingViewController.swift; sourceTree = "<group>"; };
+		042FF050249099CA00D1B246 /* MenuItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemView.swift; sourceTree = "<group>"; };
+		042FF052249099CA00D1B246 /* PagingMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagingMenuController.swift; sourceTree = "<group>"; };
+		042FF053249099CA00D1B246 /* MenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		042FF055249099CA00D1B246 /* MenuItemViewCustomizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemViewCustomizable.swift; sourceTree = "<group>"; };
+		042FF056249099CA00D1B246 /* Pagable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pagable.swift; sourceTree = "<group>"; };
+		042FF057249099CA00D1B246 /* MenuViewCustomizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewCustomizable.swift; sourceTree = "<group>"; };
+		042FF058249099CA00D1B246 /* PagingMenuControllerCustomizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagingMenuControllerCustomizable.swift; sourceTree = "<group>"; };
 		0431171624896A8E00DB58EA /* LazyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyTableViewController.swift; sourceTree = "<group>"; };
 		0431171824896AC700DB58EA /* LazyTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyTableViewModel.swift; sourceTree = "<group>"; };
-		04870E9024667C5400FCFFF0 /* HeaderTabsTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HeaderTabsTestVC.swift; path = "../../../../Refactoring_original/ios-selfcare/MyAirtel/HeaderTabsTestVC.swift"; sourceTree = "<group>"; };
-		04870E9224667D2300FCFFF0 /* HorizontalHeaderTabsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalHeaderTabsCell.swift; sourceTree = "<group>"; };
-		04870E9324667D2300FCFFF0 /* InnerTabPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnerTabPageViewController.swift; sourceTree = "<group>"; };
-		04870E9424667D2300FCFFF0 /* HorizontalTabsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalTabsViewController.swift; sourceTree = "<group>"; };
+		04E5455E24F681A4009E4BFE /* TopHeaderTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopHeaderTestVC.swift; sourceTree = "<group>"; };
 		0925A5AF244B8455004FD808 /* FloatingTextFieldTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTextFieldTestVC.swift; sourceTree = "<group>"; };
 		0925A5B1244B88BD004FD808 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		0925A5B5244C0F5B004FD808 /* NumberPadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberPadView.swift; sourceTree = "<group>"; };
@@ -89,6 +99,17 @@
 			path = "Expandable Tableview";
 			sourceTree = "<group>";
 		};
+		042FF054249099CA00D1B246 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				042FF055249099CA00D1B246 /* MenuItemViewCustomizable.swift */,
+				042FF056249099CA00D1B246 /* Pagable.swift */,
+				042FF057249099CA00D1B246 /* MenuViewCustomizable.swift */,
+				042FF058249099CA00D1B246 /* PagingMenuControllerCustomizable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		04311715248969DC00DB58EA /* Pagination TableView */ = {
 			isa = PBXGroup;
 			children = (
@@ -101,10 +122,12 @@
 		04870E8F24667C2100FCFFF0 /* Top Header Pages */ = {
 			isa = PBXGroup;
 			children = (
-				04870E9224667D2300FCFFF0 /* HorizontalHeaderTabsCell.swift */,
-				04870E9424667D2300FCFFF0 /* HorizontalTabsViewController.swift */,
-				04870E9324667D2300FCFFF0 /* InnerTabPageViewController.swift */,
-				04870E9024667C5400FCFFF0 /* HeaderTabsTestVC.swift */,
+				042FF054249099CA00D1B246 /* Protocols */,
+				042FF04F249099CA00D1B246 /* PagingViewController.swift */,
+				042FF050249099CA00D1B246 /* MenuItemView.swift */,
+				042FF052249099CA00D1B246 /* PagingMenuController.swift */,
+				042FF053249099CA00D1B246 /* MenuView.swift */,
+				04E5455E24F681A4009E4BFE /* TopHeaderTestVC.swift */,
 			);
 			path = "Top Header Pages";
 			sourceTree = "<group>";
@@ -265,25 +288,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				042FF060249099CA00D1B246 /* MenuViewCustomizable.swift in Sources */,
 				042FF047248FBC7800D1B246 /* CollapsibleHeaderViewModel.swift in Sources */,
+				042FF05D249099CA00D1B246 /* MenuView.swift in Sources */,
 				09D74A792444E00D00280E54 /* OptionsViewController.swift in Sources */,
+				042FF05A249099CA00D1B246 /* MenuItemView.swift in Sources */,
 				0925A5B0244B8455004FD808 /* FloatingTextFieldTestVC.swift in Sources */,
-				04870E9724667D2300FCFFF0 /* HorizontalTabsViewController.swift in Sources */,
 				0431171924896AC700DB58EA /* LazyTableViewModel.swift in Sources */,
 				042FF04B248FBE0200D1B246 /* ExpandableTableViewModel.swift in Sources */,
-				04870E9524667D2300FCFFF0 /* HorizontalHeaderTabsCell.swift in Sources */,
 				0925A5B6244C0F5B004FD808 /* NumberPadView.swift in Sources */,
 				0925A5BA244C24B7004FD808 /* AmountPadViewController.swift in Sources */,
 				09D74A8B2444E31800280E54 /* WidgetCardViewController.swift in Sources */,
-				04870E9124667C5400FCFFF0 /* HeaderTabsTestVC.swift in Sources */,
+				042FF05F249099CA00D1B246 /* Pagable.swift in Sources */,
+				04E5455F24F681A4009E4BFE /* TopHeaderTestVC.swift in Sources */,
 				042FF049248FBCE300D1B246 /* Binding.swift in Sources */,
+				042FF05E249099CA00D1B246 /* MenuItemViewCustomizable.swift in Sources */,
+				042FF059249099CA00D1B246 /* PagingViewController.swift in Sources */,
 				042FF045248FBC0300D1B246 /* CollapsibleTableViewHeader.swift in Sources */,
 				09D74A772444E00D00280E54 /* AppDelegate.swift in Sources */,
-				04870E9624667D2300FCFFF0 /* InnerTabPageViewController.swift in Sources */,
+				042FF05C249099CA00D1B246 /* PagingMenuController.swift in Sources */,
 				09FF2321244B7D9B000A298D /* FloatingTextField.swift in Sources */,
 				042FF043248FBA7C00D1B246 /* ExpandableTableViewController.swift in Sources */,
 				0431171724896A8E00DB58EA /* LazyTableViewController.swift in Sources */,
 				0925A5B8244C1018004FD808 /* GridStackView.swift in Sources */,
+				042FF061249099CA00D1B246 /* PagingMenuControllerCustomizable.swift in Sources */,
 				0925A5B2244B88BD004FD808 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

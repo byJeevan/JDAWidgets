@@ -11,18 +11,20 @@ import UIKit
 
 class ExpandableTableViewModel {
     
-    let dataRowSample = [
-        [ "iPhone SE", "iPhone X", "iPhone 8"],
-        [ "Pro 2019", "Air 2019"],
-        [ "Full HD", "Normal HD", "Ultra HD 4k"],
-        ["iWatch with Strap"]
-    ]
-    
+
     let dataSectionSample = [
         "iPhone Model",
         "Macbook Model",
         "iMac Model",
         "Watch Model"
+    ]
+    
+    let dataRowSample = [
+        [ "iPhone SE : Single-camera system (Wide)\n Up to 13 hours of video playback1 \n Water resistant to a depth of 1 metre for up to 30 minutes2", "iPhone X", "iPhone 8",
+          "iPhone 11 Pro : Pro cameras. \n Pro display. \n Pro performance"],
+        [ "Pro 2019", "Air 2019"],
+        [ "Full HD", "Normal HD", "Ultra HD 4k"],
+        ["iWatch with Strap"]
     ]
     
     var sectionMap = Binding<[CollapsibleHeaderViewModel]>.init(value: [])

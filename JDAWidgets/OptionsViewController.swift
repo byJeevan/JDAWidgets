@@ -42,7 +42,7 @@ class OptionViewController: UIViewController {
             self.navigationController?.pushViewController(vc, animated: true)
             break
         case .topHeaderPage :
-            self.navigationController?.pushViewController(HeaderTabsTestVC(), animated: true)
+            self.navigationController?.pushViewController(TopHeaderTestVC(), animated: true)
             break
         case .paginationTableView:
             self.navigationController?.pushViewController(LazyTableViewController(), animated: true)
