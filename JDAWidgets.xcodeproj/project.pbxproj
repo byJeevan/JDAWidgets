@@ -23,6 +23,8 @@
 		042FF061249099CA00D1B246 /* PagingMenuControllerCustomizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042FF058249099CA00D1B246 /* PagingMenuControllerCustomizable.swift */; };
 		0431171724896A8E00DB58EA /* LazyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0431171624896A8E00DB58EA /* LazyTableViewController.swift */; };
 		0431171924896AC700DB58EA /* LazyTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0431171824896AC700DB58EA /* LazyTableViewModel.swift */; };
+		0443AA3B24FC1A9900FA6CEE /* InBornViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0443AA3A24FC1A9900FA6CEE /* InBornViewController.swift */; };
+		0443AA3D24FC1ABC00FA6CEE /* InBornViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0443AA3C24FC1ABC00FA6CEE /* InBornViewController.xib */; };
 		04E5455F24F681A4009E4BFE /* TopHeaderTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E5455E24F681A4009E4BFE /* TopHeaderTestVC.swift */; };
 		0925A5B0244B8455004FD808 /* FloatingTextFieldTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0925A5AF244B8455004FD808 /* FloatingTextFieldTestVC.swift */; };
 		0925A5B2244B88BD004FD808 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0925A5B1244B88BD004FD808 /* Extensions.swift */; };
@@ -57,6 +59,8 @@
 		042FF058249099CA00D1B246 /* PagingMenuControllerCustomizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagingMenuControllerCustomizable.swift; sourceTree = "<group>"; };
 		0431171624896A8E00DB58EA /* LazyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyTableViewController.swift; sourceTree = "<group>"; };
 		0431171824896AC700DB58EA /* LazyTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyTableViewModel.swift; sourceTree = "<group>"; };
+		0443AA3A24FC1A9900FA6CEE /* InBornViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InBornViewController.swift; sourceTree = "<group>"; };
+		0443AA3C24FC1ABC00FA6CEE /* InBornViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InBornViewController.xib; sourceTree = "<group>"; };
 		04E5455E24F681A4009E4BFE /* TopHeaderTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopHeaderTestVC.swift; sourceTree = "<group>"; };
 		0925A5AF244B8455004FD808 /* FloatingTextFieldTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTextFieldTestVC.swift; sourceTree = "<group>"; };
 		0925A5B1244B88BD004FD808 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -132,6 +136,15 @@
 			path = "Top Header Pages";
 			sourceTree = "<group>";
 		};
+		04E6818624FD292F008CC1ED /* ScrollableStackCard */ = {
+			isa = PBXGroup;
+			children = (
+				0443AA3A24FC1A9900FA6CEE /* InBornViewController.swift */,
+				0443AA3C24FC1ABC00FA6CEE /* InBornViewController.xib */,
+			);
+			path = ScrollableStackCard;
+			sourceTree = "<group>";
+		};
 		0925A5B3244B8F52004FD808 /* Card View */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +203,7 @@
 				0925A5B4244C0F42004FD808 /* Amount Pad */,
 				09FF231F244B7D79000A298D /* Floating Textfield */,
 				0925A5B3244B8F52004FD808 /* Card View */,
+				04E6818624FD292F008CC1ED /* ScrollableStackCard */,
 			);
 			path = Widgets;
 			sourceTree = "<group>";
@@ -275,6 +289,7 @@
 				09D74A812444E00E00280E54 /* LaunchScreen.storyboard in Resources */,
 				042FF04D248FC69100D1B246 /* CollapsibleTableViewHeader.xib in Resources */,
 				09D74A7E2444E00E00280E54 /* Assets.xcassets in Resources */,
+				0443AA3D24FC1ABC00FA6CEE /* InBornViewController.xib in Resources */,
 				0925A5BC244C256A004FD808 /* AmountPadViewController.xib in Resources */,
 				0925A5BE244C2AF8004FD808 /* AmountPad.xcassets in Resources */,
 				09D74A7C2444E00D00280E54 /* Main.storyboard in Resources */,
@@ -312,6 +327,7 @@
 				0431171724896A8E00DB58EA /* LazyTableViewController.swift in Sources */,
 				0925A5B8244C1018004FD808 /* GridStackView.swift in Sources */,
 				042FF061249099CA00D1B246 /* PagingMenuControllerCustomizable.swift in Sources */,
+				0443AA3B24FC1A9900FA6CEE /* InBornViewController.swift in Sources */,
 				0925A5B2244B88BD004FD808 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

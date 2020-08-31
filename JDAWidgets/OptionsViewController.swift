@@ -16,7 +16,7 @@ enum WidgetType:String, CaseIterable {
     case topHeaderPage = "Top Header Tabs"
     case paginationTableView = "Pagination Tableview"
     case expandableTableView = "Expandable TableView"
-
+    case scrollableStackCard = "Stack view capable of scrolling when overflows"
 }
 
 class OptionViewController: UIViewController {
@@ -50,6 +50,9 @@ class OptionViewController: UIViewController {
         case .expandableTableView:
             self.navigationController?.pushViewController(ExpandableTableViewController(), animated: true)
 
+        case .scrollableStackCard:
+            self.navigationController?.pushViewController(InBornViewController(), animated: true)
+
         }
     }
     
@@ -73,6 +76,7 @@ extension OptionViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: Constants.tableId) {
             cell.textLabel?.text = Constants.widgets[indexPath.row].rawValue
+            cell.textLabel?.numberOfLines = 3
             cell.accessoryType = .disclosureIndicator
             return cell
         }
