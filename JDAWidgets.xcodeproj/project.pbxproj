@@ -33,6 +33,11 @@
 		0925A5BA244C24B7004FD808 /* AmountPadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0925A5B9244C24B7004FD808 /* AmountPadViewController.swift */; };
 		0925A5BC244C256A004FD808 /* AmountPadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0925A5BB244C256A004FD808 /* AmountPadViewController.xib */; };
 		0925A5BE244C2AF8004FD808 /* AmountPad.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0925A5BD244C2AF8004FD808 /* AmountPad.xcassets */; };
+		0926F30D25282FA7008FACFD /* BaseMVVMTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0926F30C25282FA7008FACFD /* BaseMVVMTableVC.swift */; };
+		0926F30F25283068008FACFD /* BaseMVVMTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0926F30E25283068008FACFD /* BaseMVVMTableViewModel.swift */; };
+		0926F311252830F8008FACFD /* BaseTableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0926F310252830F8008FACFD /* BaseTableProtocol.swift */; };
+		0926F3132528356D008FACFD /* DemoTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0926F3122528356D008FACFD /* DemoTableCellView.swift */; };
+		0926F3152528359C008FACFD /* DemoHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0926F3142528359C008FACFD /* DemoHeaderFooterView.swift */; };
 		09D74A772444E00D00280E54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D74A762444E00D00280E54 /* AppDelegate.swift */; };
 		09D74A792444E00D00280E54 /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D74A782444E00D00280E54 /* OptionsViewController.swift */; };
 		09D74A7C2444E00D00280E54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09D74A7A2444E00D00280E54 /* Main.storyboard */; };
@@ -69,6 +74,11 @@
 		0925A5B9244C24B7004FD808 /* AmountPadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountPadViewController.swift; sourceTree = "<group>"; };
 		0925A5BB244C256A004FD808 /* AmountPadViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AmountPadViewController.xib; sourceTree = "<group>"; };
 		0925A5BD244C2AF8004FD808 /* AmountPad.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AmountPad.xcassets; sourceTree = "<group>"; };
+		0926F30C25282FA7008FACFD /* BaseMVVMTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMVVMTableVC.swift; sourceTree = "<group>"; };
+		0926F30E25283068008FACFD /* BaseMVVMTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMVVMTableViewModel.swift; sourceTree = "<group>"; };
+		0926F310252830F8008FACFD /* BaseTableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableProtocol.swift; sourceTree = "<group>"; };
+		0926F3122528356D008FACFD /* DemoTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoTableCellView.swift; sourceTree = "<group>"; };
+		0926F3142528359C008FACFD /* DemoHeaderFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoHeaderFooterView.swift; sourceTree = "<group>"; };
 		09D74A732444E00D00280E54 /* JDAWidgets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JDAWidgets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09D74A762444E00D00280E54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09D74A782444E00D00280E54 /* OptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
@@ -165,6 +175,18 @@
 			path = "Amount Pad";
 			sourceTree = "<group>";
 		};
+		0926F30B25282F48008FACFD /* MVVM tableview */ = {
+			isa = PBXGroup;
+			children = (
+				0926F310252830F8008FACFD /* BaseTableProtocol.swift */,
+				0926F30C25282FA7008FACFD /* BaseMVVMTableVC.swift */,
+				0926F30E25283068008FACFD /* BaseMVVMTableViewModel.swift */,
+				0926F3122528356D008FACFD /* DemoTableCellView.swift */,
+				0926F3142528359C008FACFD /* DemoHeaderFooterView.swift */,
+			);
+			path = "MVVM tableview";
+			sourceTree = "<group>";
+		};
 		09D74A6A2444E00D00280E54 = {
 			isa = PBXGroup;
 			children = (
@@ -197,6 +219,7 @@
 		09D74A882444E1E400280E54 /* Widgets */ = {
 			isa = PBXGroup;
 			children = (
+				0926F30B25282F48008FACFD /* MVVM tableview */,
 				042FF041248FBA4C00D1B246 /* Expandable Tableview */,
 				04311715248969DC00DB58EA /* Pagination TableView */,
 				04870E8F24667C2100FCFFF0 /* Top Header Pages */,
@@ -305,6 +328,7 @@
 			files = (
 				042FF060249099CA00D1B246 /* MenuViewCustomizable.swift in Sources */,
 				042FF047248FBC7800D1B246 /* CollapsibleHeaderViewModel.swift in Sources */,
+				0926F3132528356D008FACFD /* DemoTableCellView.swift in Sources */,
 				042FF05D249099CA00D1B246 /* MenuView.swift in Sources */,
 				09D74A792444E00D00280E54 /* OptionsViewController.swift in Sources */,
 				042FF05A249099CA00D1B246 /* MenuItemView.swift in Sources */,
@@ -318,14 +342,18 @@
 				042FF049248FBCE300D1B246 /* Binding.swift in Sources */,
 				042FF05E249099CA00D1B246 /* MenuItemViewCustomizable.swift in Sources */,
 				042FF059249099CA00D1B246 /* PagingViewController.swift in Sources */,
+				0926F311252830F8008FACFD /* BaseTableProtocol.swift in Sources */,
 				042FF045248FBC0300D1B246 /* CollapsibleTableViewHeader.swift in Sources */,
 				09D74A772444E00D00280E54 /* AppDelegate.swift in Sources */,
 				042FF05C249099CA00D1B246 /* PagingMenuController.swift in Sources */,
+				0926F30D25282FA7008FACFD /* BaseMVVMTableVC.swift in Sources */,
 				09FF2321244B7D9B000A298D /* FloatingTextField.swift in Sources */,
 				042FF043248FBA7C00D1B246 /* ExpandableTableViewController.swift in Sources */,
 				0925A5B8244C1018004FD808 /* GridStackView.swift in Sources */,
 				04E6818A24FD2AB1008CC1ED /* LazyTableViewController.swift in Sources */,
 				042FF061249099CA00D1B246 /* PagingMenuControllerCustomizable.swift in Sources */,
+				0926F3152528359C008FACFD /* DemoHeaderFooterView.swift in Sources */,
+				0926F30F25283068008FACFD /* BaseMVVMTableViewModel.swift in Sources */,
 				0443AA3B24FC1A9900FA6CEE /* InBornViewController.swift in Sources */,
 				04E6818924FD2AB1008CC1ED /* LazyTableViewModel.swift in Sources */,
 				0925A5B2244B88BD004FD808 /* Extensions.swift in Sources */,

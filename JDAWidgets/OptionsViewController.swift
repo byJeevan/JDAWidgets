@@ -17,6 +17,7 @@ enum WidgetType:String, CaseIterable {
     case paginationTableView = "Pagination Tableview"
     case expandableTableView = "Expandable TableView"
     case scrollableStackCard = "Stack view capable of scrolling when overflows"
+    case mvvmTableViewTemplate = "Table View template for MVVM"
 }
 
 class OptionViewController: UIViewController {
@@ -52,6 +53,9 @@ class OptionViewController: UIViewController {
 
         case .scrollableStackCard:
             self.navigationController?.pushViewController(InBornViewController(), animated: true)
+
+        case .mvvmTableViewTemplate :
+            self.navigationController?.pushViewController(BaseMVVMTableVC(viewModel: BaseMVVMTableViewModel()), animated: true)
 
         }
     }
