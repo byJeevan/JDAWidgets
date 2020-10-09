@@ -38,6 +38,10 @@
 		0926F311252830F8008FACFD /* BaseTableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0926F310252830F8008FACFD /* BaseTableProtocol.swift */; };
 		0926F3132528356D008FACFD /* DemoTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0926F3122528356D008FACFD /* DemoTableCellView.swift */; };
 		0926F3152528359C008FACFD /* DemoHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0926F3142528359C008FACFD /* DemoHeaderFooterView.swift */; };
+		0929066C2530CAC00008C80C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0929066B2530CAC00008C80C /* BaseViewController.swift */; };
+		0929066F2530CB930008C80C /* ExtendedLabelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0929066E2530CB930008C80C /* ExtendedLabelVC.swift */; };
+		092906712530CBB90008C80C /* ExtendedLabelVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 092906702530CBB90008C80C /* ExtendedLabelVC.xib */; };
+		092906742530D8030008C80C /* InteractiveLinkLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092906732530D8030008C80C /* InteractiveLinkLabel.swift */; };
 		09D74A772444E00D00280E54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D74A762444E00D00280E54 /* AppDelegate.swift */; };
 		09D74A792444E00D00280E54 /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D74A782444E00D00280E54 /* OptionsViewController.swift */; };
 		09D74A7C2444E00D00280E54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09D74A7A2444E00D00280E54 /* Main.storyboard */; };
@@ -79,6 +83,10 @@
 		0926F310252830F8008FACFD /* BaseTableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableProtocol.swift; sourceTree = "<group>"; };
 		0926F3122528356D008FACFD /* DemoTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoTableCellView.swift; sourceTree = "<group>"; };
 		0926F3142528359C008FACFD /* DemoHeaderFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoHeaderFooterView.swift; sourceTree = "<group>"; };
+		0929066B2530CAC00008C80C /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		0929066E2530CB930008C80C /* ExtendedLabelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtendedLabelVC.swift; sourceTree = "<group>"; };
+		092906702530CBB90008C80C /* ExtendedLabelVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExtendedLabelVC.xib; sourceTree = "<group>"; };
+		092906732530D8030008C80C /* InteractiveLinkLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveLinkLabel.swift; sourceTree = "<group>"; };
 		09D74A732444E00D00280E54 /* JDAWidgets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JDAWidgets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09D74A762444E00D00280E54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09D74A782444E00D00280E54 /* OptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
@@ -187,6 +195,24 @@
 			path = "MVVM tableview";
 			sourceTree = "<group>";
 		};
+		0929066D2530CB720008C80C /* Extended Labels */ = {
+			isa = PBXGroup;
+			children = (
+				092906722530CD110008C80C /* Clickable Label */,
+				0929066E2530CB930008C80C /* ExtendedLabelVC.swift */,
+				092906702530CBB90008C80C /* ExtendedLabelVC.xib */,
+			);
+			path = "Extended Labels";
+			sourceTree = "<group>";
+		};
+		092906722530CD110008C80C /* Clickable Label */ = {
+			isa = PBXGroup;
+			children = (
+				092906732530D8030008C80C /* InteractiveLinkLabel.swift */,
+			);
+			path = "Clickable Label";
+			sourceTree = "<group>";
+		};
 		09D74A6A2444E00D00280E54 = {
 			isa = PBXGroup;
 			children = (
@@ -209,6 +235,7 @@
 				09D74A782444E00D00280E54 /* OptionsViewController.swift */,
 				0925A5B1244B88BD004FD808 /* Extensions.swift */,
 				042FF048248FBCE300D1B246 /* Binding.swift */,
+				0929066B2530CAC00008C80C /* BaseViewController.swift */,
 				09D74A882444E1E400280E54 /* Widgets */,
 				09D74A892444E1F400280E54 /* Supporting Files */,
 				09D74A822444E00E00280E54 /* Info.plist */,
@@ -219,6 +246,7 @@
 		09D74A882444E1E400280E54 /* Widgets */ = {
 			isa = PBXGroup;
 			children = (
+				0929066D2530CB720008C80C /* Extended Labels */,
 				0926F30B25282F48008FACFD /* MVVM tableview */,
 				042FF041248FBA4C00D1B246 /* Expandable Tableview */,
 				04311715248969DC00DB58EA /* Pagination TableView */,
@@ -315,6 +343,7 @@
 				0443AA3D24FC1ABC00FA6CEE /* InBornViewController.xib in Resources */,
 				0925A5BC244C256A004FD808 /* AmountPadViewController.xib in Resources */,
 				0925A5BE244C2AF8004FD808 /* AmountPad.xcassets in Resources */,
+				092906712530CBB90008C80C /* ExtendedLabelVC.xib in Resources */,
 				09D74A7C2444E00D00280E54 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -328,6 +357,7 @@
 			files = (
 				042FF060249099CA00D1B246 /* MenuViewCustomizable.swift in Sources */,
 				042FF047248FBC7800D1B246 /* CollapsibleHeaderViewModel.swift in Sources */,
+				0929066F2530CB930008C80C /* ExtendedLabelVC.swift in Sources */,
 				0926F3132528356D008FACFD /* DemoTableCellView.swift in Sources */,
 				042FF05D249099CA00D1B246 /* MenuView.swift in Sources */,
 				09D74A792444E00D00280E54 /* OptionsViewController.swift in Sources */,
@@ -339,10 +369,12 @@
 				09D74A8B2444E31800280E54 /* WidgetCardViewController.swift in Sources */,
 				042FF05F249099CA00D1B246 /* Pagable.swift in Sources */,
 				04E5455F24F681A4009E4BFE /* TopHeaderTestVC.swift in Sources */,
+				0929066C2530CAC00008C80C /* BaseViewController.swift in Sources */,
 				042FF049248FBCE300D1B246 /* Binding.swift in Sources */,
 				042FF05E249099CA00D1B246 /* MenuItemViewCustomizable.swift in Sources */,
 				042FF059249099CA00D1B246 /* PagingViewController.swift in Sources */,
 				0926F311252830F8008FACFD /* BaseTableProtocol.swift in Sources */,
+				092906742530D8030008C80C /* InteractiveLinkLabel.swift in Sources */,
 				042FF045248FBC0300D1B246 /* CollapsibleTableViewHeader.swift in Sources */,
 				09D74A772444E00D00280E54 /* AppDelegate.swift in Sources */,
 				042FF05C249099CA00D1B246 /* PagingMenuController.swift in Sources */,
