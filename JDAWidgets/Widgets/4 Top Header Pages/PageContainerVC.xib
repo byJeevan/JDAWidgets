@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PageContainerVC" customModule="JDAWidgets" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionContainerView" destination="qzw-S0-jl6" id="5aQ-iZ-s9f"/>
+                <outlet property="pageContainerView" destination="oax-kL-3aq" id="AJ1-7Z-SdM"/>
+                <outlet property="view" destination="iN0-l3-epB" id="ipa-tI-aZ7"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oax-kL-3aq">
+                    <rect key="frame" x="0.0" y="91" width="414" height="771"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qzw-S0-jl6">
+                    <rect key="frame" x="0.0" y="44" width="414" height="45"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="DDn-mn-oRf"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="oax-kL-3aq" firstAttribute="top" secondItem="qzw-S0-jl6" secondAttribute="bottom" constant="2" id="2io-g7-Psx"/>
+                <constraint firstItem="oax-kL-3aq" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Awm-pZ-KM2"/>
+                <constraint firstItem="qzw-S0-jl6" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="DYm-7s-Tl1"/>
+                <constraint firstItem="qzw-S0-jl6" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="DmW-vO-bw5"/>
+                <constraint firstItem="oax-kL-3aq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="c56-Fr-GeS"/>
+                <constraint firstItem="qzw-S0-jl6" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="iiG-Z4-CaV"/>
+                <constraint firstItem="oax-kL-3aq" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="skU-8B-K0p"/>
+            </constraints>
+            <point key="canvasLocation" x="140.57971014492756" y="150"/>
+        </view>
+    </objects>
+</document>
