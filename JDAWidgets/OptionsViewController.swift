@@ -13,12 +13,14 @@ enum WidgetType:String, CaseIterable {
     case cardView = "Card View in ViewController"
     case floatingTextField = "Floating Label Text Field"
     case numberPad = "On screen number pad"
-    case topHeaderPage = "Top Header Tabs"
-    case paginationTableView = "Pagination Tableview"
+    case topHeaderPage = "Top Header Menu with Horizontal Paging"
+    case paginationTableView = "Pagination Tableview" // 5
     case expandableTableView = "Expandable TableView"
     case scrollableStackCard = "Stack view capable of scrolling when overflows"
     case mvvmTableViewTemplate = "Table View template for MVVM"
     case labelExtened = "Extended functional Labels"
+    case galleryDetailedZoom = "Image Gallery with Thumbnail and Zoom support" // 10
+
 }
 
 class OptionViewController: UIViewController {
@@ -44,7 +46,7 @@ class OptionViewController: UIViewController {
             self.navigationController?.pushViewController(vc, animated: true)
             break
         case .topHeaderPage :
-            self.navigationController?.pushViewController(TopHeaderTestVC(), animated: true)
+          self.navigationController?.pushViewController(PageContainerVC(nibName: "PageContainerVC", bundle: nil), animated: true)
             break
         case .paginationTableView:
             self.navigationController?.pushViewController(LazyTableViewController(), animated: true)
@@ -61,7 +63,14 @@ class OptionViewController: UIViewController {
         case .labelExtened:
             self.navigationController?.pushViewController(ExtendedLabelVC(), animated: true)
             break
-            
+        case .galleryDetailedZoom:
+          let images = [
+                UIImage(named: "sample_1")!,
+                UIImage(named: "sample_2")!,
+                UIImage(named: "sample_3")!
+              ]
+          self.navigationController?.pushViewController(GalleryDetailViewController.init(images: images, defaultIndex: 0), animated: true)
+
         }
     }
     
