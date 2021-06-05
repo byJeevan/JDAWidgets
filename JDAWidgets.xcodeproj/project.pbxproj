@@ -56,6 +56,7 @@
 		09D74A812444E00E00280E54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09D74A7F2444E00E00280E54 /* LaunchScreen.storyboard */; };
 		09D74A8B2444E31800280E54 /* WidgetCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D74A8A2444E31800280E54 /* WidgetCardViewController.swift */; };
 		09FF2321244B7D9B000A298D /* FloatingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FF2320244B7D9B000A298D /* FloatingTextField.swift */; };
+		D5D13C2FD8FED1516473C0CE /* Pods_JDAWidgets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D57EAC4EED89223750F57710 /* Pods_JDAWidgets.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -110,6 +111,9 @@
 		09D74A822444E00E00280E54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09D74A8A2444E31800280E54 /* WidgetCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetCardViewController.swift; sourceTree = "<group>"; };
 		09FF2320244B7D9B000A298D /* FloatingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTextField.swift; sourceTree = "<group>"; };
+		8921A403449CE710668D8042 /* Pods-JDAWidgets.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JDAWidgets.debug.xcconfig"; path = "Target Support Files/Pods-JDAWidgets/Pods-JDAWidgets.debug.xcconfig"; sourceTree = "<group>"; };
+		9E8A5A2DF7D1B98A60A48A42 /* Pods-JDAWidgets.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JDAWidgets.release.xcconfig"; path = "Target Support Files/Pods-JDAWidgets/Pods-JDAWidgets.release.xcconfig"; sourceTree = "<group>"; };
+		D57EAC4EED89223750F57710 /* Pods_JDAWidgets.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JDAWidgets.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5D13C2FD8FED1516473C0CE /* Pods_JDAWidgets.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +258,8 @@
 			children = (
 				09D74A752444E00D00280E54 /* JDAWidgets */,
 				09D74A742444E00D00280E54 /* Products */,
+				650EE429D7315E58570B43EE /* Pods */,
+				0A2873CB56EBA74A1B3AA500 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -316,6 +323,23 @@
 			path = "2 Floating Textfield";
 			sourceTree = "<group>";
 		};
+		0A2873CB56EBA74A1B3AA500 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D57EAC4EED89223750F57710 /* Pods_JDAWidgets.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		650EE429D7315E58570B43EE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8921A403449CE710668D8042 /* Pods-JDAWidgets.debug.xcconfig */,
+				9E8A5A2DF7D1B98A60A48A42 /* Pods-JDAWidgets.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -323,9 +347,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 09D74A852444E00E00280E54 /* Build configuration list for PBXNativeTarget "JDAWidgets" */;
 			buildPhases = (
+				67399A4BC05B59A24445CEFD /* [CP] Check Pods Manifest.lock */,
 				09D74A6F2444E00D00280E54 /* Sources */,
 				09D74A702444E00D00280E54 /* Frameworks */,
 				09D74A712444E00D00280E54 /* Resources */,
+				09357AF8266BF11800B8A9F7 /* SwiftLint Script */,
 			);
 			buildRules = (
 			);
@@ -393,6 +419,49 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		09357AF8266BF11800B8A9F7 /* SwiftLint Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "SwiftLint Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ \"${CONFIGURATION}\" = \"Debug\" ]; then\nif which swiftlint >/dev/null; then\nswiftlint --config \"$SRCROOT/.swiftlint.yml\"\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\nfi\n";
+		};
+		67399A4BC05B59A24445CEFD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JDAWidgets-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		09D74A6F2444E00D00280E54 /* Sources */ = {
@@ -576,6 +645,7 @@
 		};
 		09D74A862444E00E00280E54 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8921A403449CE710668D8042 /* Pods-JDAWidgets.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -595,6 +665,7 @@
 		};
 		09D74A872444E00E00280E54 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E8A5A2DF7D1B98A60A48A42 /* Pods-JDAWidgets.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

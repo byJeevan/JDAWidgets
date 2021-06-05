@@ -279,15 +279,15 @@ import ObjectiveC
 import UIKit
 
 // Declare a global var to produce a unique address as the assoc object handle
-var AssociatedObjectHandle: UInt8 = 0
+var associatedObjectHandle: UInt8 = 0
 
 extension UIViewController {
   var index: Int? {
     get {
-      objc_getAssociatedObject(self, &AssociatedObjectHandle) as? Int
+      objc_getAssociatedObject(self, &associatedObjectHandle) as? Int
     }
     set {
-      objc_setAssociatedObject(self, &AssociatedObjectHandle, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+      objc_setAssociatedObject(self, &associatedObjectHandle, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
     }
   }
 }

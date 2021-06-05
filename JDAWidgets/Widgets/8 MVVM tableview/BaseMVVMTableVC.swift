@@ -14,7 +14,7 @@ import UIKit
 class BaseMVVMTableVC : UIViewController {
     
     var sampleTableView: UITableView!
-    var viewModel:BaseMVVMTableViewModel?
+    var viewModel: BaseMVVMTableViewModel?
     
     struct Constants {
         static let tableCellId = "TableCellID"
@@ -23,7 +23,7 @@ class BaseMVVMTableVC : UIViewController {
     
     //MARK:- Initilizers for class
     ///Inject view model
-    init(viewModel:BaseMVVMTableViewModel) {
+    init(viewModel: BaseMVVMTableViewModel) {
         super.init(nibName: nil, bundle: nil)
         self.viewModel = viewModel
     }
@@ -93,4 +93,3 @@ extension BaseMVVMTableVC : UITableViewDelegate, UITableViewDataSource {
     }
     
 }
-

@@ -9,19 +9,19 @@
 import Foundation
 import UIKit
 
-//Simple view controller where its view layed-out as a card.
-class WidgetCardViewController : UIViewController {
+// Simple view controller where its view layed-out as a card.
+class WidgetCardViewController: UIViewController {
     
     var containerView = UIView()
     let likeButton = UIButton()
     
-    //MARK:- View Controller Life Cycle
+    // MARK :- View Controller Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .lightGray
         containerView.backgroundColor = .white
         self.view.addSubview(containerView)
-        edgesForExtendedLayout = [] //To avoid navigation bar cover the Card.
+        edgesForExtendedLayout = [] // To avoid navigation bar cover the Card.
         self.title = "Card Layout"
         
         self.view.addSubview(self.likeButton)
@@ -33,8 +33,7 @@ class WidgetCardViewController : UIViewController {
         containerView.frame = self.view.bounds.insetBy(dx: 10.0, dy: 10.0)
         
         self.likeButton.frame = CGRect.init(x: 20, y: 20, width: 70, height: 70)
-        
-        
+
         let notLikedImage = UIImage.init(named: "heart")?.withRenderingMode(.alwaysOriginal)
         let likedImage = UIImage.init(named: "heart")?.withRenderingMode(.alwaysTemplate)
         self.likeButton.tintColor = .red
@@ -45,12 +44,12 @@ class WidgetCardViewController : UIViewController {
 
     }
     
-    @objc func updatedButton(){
+    @objc func updatedButton() {
         self.likeButton.isSelected = !self.likeButton.isSelected
     }
 }
 
-//MARK:- View Extension to create corner radius with shadow
+// MARK: - View Extension to create corner radius with shadow
 extension UIView {
     
     @IBInspectable

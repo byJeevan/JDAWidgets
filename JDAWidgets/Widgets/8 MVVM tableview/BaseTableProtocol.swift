@@ -18,7 +18,7 @@ protocol RowRepresentable { }
 protocol HeaderFooterRepresentable { }
 
 struct TableSection {
-    var header:HeaderFooterRepresentable?
-    var rows:[RowRepresentable]?
-    var footer:HeaderFooterRepresentable?
+    var header: HeaderFooterRepresentable?
+    var rows: [RowRepresentable]?
+    var footer: HeaderFooterRepresentable?
 }

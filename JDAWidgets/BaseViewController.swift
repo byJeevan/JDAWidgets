@@ -8,8 +8,7 @@
 
 import UIKit
 
-///Base class for all UIViewController
-class BaseViewController : UIViewController {
-    
+/// Base class for all UIViewController
+class BaseViewController: UIViewController {
     
 }

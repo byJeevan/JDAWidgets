@@ -441,8 +441,8 @@ open class FloatingTextField: UITextField{
         let font: UIFont = errorLabel.font ?? UIFont.systemFont(ofSize: 17.0)
         let topPaddingForError:CGFloat = 5.0
         let textAttributes = [NSAttributedString.Key.font: font]
-        let s = CGSize(width: bounds.size.width, height: 2000)
-        let boundingRect = error.boundingRect(with: s, options: .usesLineFragmentOrigin, attributes: textAttributes, context: nil)
+        let size = CGSize(width: bounds.size.width, height: 2000)
+        let boundingRect = error.boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: textAttributes, context: nil)
         return CGRect(x: 0, y: topPaddingForError + bounds.size.height, width: boundingRect.size.width, height: boundingRect.size.height)
     }
     

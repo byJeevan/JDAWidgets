@@ -16,7 +16,7 @@ class GalleryDetailViewController: BaseViewController {
   @IBOutlet private weak var galleryCollectionView: UICollectionView!
   @IBOutlet private weak var thumbCollectionView: UICollectionView!
 
-  private var imageDataSource:[UIImage]?
+  private var imageDataSource: [UIImage]?
 
   private var focusedCellIndex: Int? {
     didSet {
@@ -36,7 +36,7 @@ class GalleryDetailViewController: BaseViewController {
     super.init(coder: coder)
   }
 
-  // MARK:- ViewController Lifecycle
+  // MARK: - ViewController Lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
     registerCells()
@@ -137,7 +137,6 @@ private extension GalleryDetailViewController {
 
 }
 
-
 // MARK: - UICollectionView DataSource
 
 extension GalleryDetailViewController: UICollectionViewDataSource {
@@ -154,17 +153,16 @@ extension GalleryDetailViewController: UICollectionViewDataSource {
 
     switch collectionView.tag {
     case Constants.GalleryDetail.galleryCollectionViewTag:
-      let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GalleryImageCell", for: indexPath) as! GalleryImageCell
-      cell.setupCell(imageDataSource?[indexPath.row], tag: indexPath.row + 100)
-      cell.resetZoomScale()
-
-      return cell
+      let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GalleryImageCell", for: indexPath) as? GalleryImageCell
+      cell?.setupCell(imageDataSource?[indexPath.row], tag: indexPath.row + 100)
+      cell?.resetZoomScale()
+      return cell ?? UICollectionViewCell()
 
     case Constants.GalleryDetail.thumbCollectionViewTag:
-      let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GalleryThumbImageCell", for: indexPath) as! GalleryThumbImageCell
-      cell.setupCell(imageDataSource?[indexPath.row], tag: indexPath.row + 200)
-      cell.isSelectedImage = indexPath.row == focusedCellIndex
-      return cell
+      let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GalleryThumbImageCell", for: indexPath) as? GalleryThumbImageCell
+      cell?.setupCell(imageDataSource?[indexPath.row], tag: indexPath.row + 200)
+      cell?.isSelectedImage = indexPath.row == focusedCellIndex
+      return cell ?? UICollectionViewCell()
 
     default:
       return UICollectionViewCell()
@@ -229,6 +227,6 @@ extension Constants {
   struct GalleryDetail {
     static let galleryCollectionViewTag = 10
     static let thumbCollectionViewTag = 11
-    static let gallerySizeWH:CGFloat = 45
+    static let gallerySizeWH: CGFloat = 45
   }
 }

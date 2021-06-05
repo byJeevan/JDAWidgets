@@ -62,7 +62,7 @@ extension AmountPadViewController : NumberPadInputProtocol {
         
         var amountString:String = amountWholeDegits.map { String($0) }.joined(separator: "")
         
-        if amountDecimalDigits.count > 0 {
+      if !amountDecimalDigits.isEmpty {
             amountString.append(".\(amountDecimalDigits.map { String($0) }.joined(separator: ""))")
         }
         
@@ -87,13 +87,12 @@ extension AmountPadViewController : NumberPadInputProtocol {
     }
     
     func didClearTapped() {
-        if isDecimalEnabled == true && amountDecimalDigits.count > 0 {
+        if isDecimalEnabled && !amountDecimalDigits.isEmpty {
             amountDecimalDigits = amountDecimalDigits.dropLast()
-            if amountDecimalDigits.count == 0 {
+            if amountDecimalDigits.isEmpty {
                 self.isDecimalEnabled = false
             }
-        }
-        else{
+        } else{
             amountWholeDegits = amountWholeDegits.dropLast()
         }
         
