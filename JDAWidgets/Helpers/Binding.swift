@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 class Binding<T> {
   var value: T {
     didSet {

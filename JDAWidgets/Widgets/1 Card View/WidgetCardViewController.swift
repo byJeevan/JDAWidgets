@@ -15,7 +15,7 @@ class WidgetCardViewController: UIViewController {
     var containerView = UIView()
     let likeButton = UIButton()
     
-    // MARK :- View Controller Life Cycle
+    // MARK: - View Controller Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .lightGray

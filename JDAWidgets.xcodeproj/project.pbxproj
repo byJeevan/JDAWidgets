@@ -17,6 +17,7 @@
 		0443AA3D24FC1ABC00FA6CEE /* InBornViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0443AA3C24FC1ABC00FA6CEE /* InBornViewController.xib */; };
 		04E6818924FD2AB1008CC1ED /* LazyTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E6818724FD2AB1008CC1ED /* LazyTableViewModel.swift */; };
 		04E6818A24FD2AB1008CC1ED /* LazyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E6818824FD2AB1008CC1ED /* LazyTableViewController.swift */; };
+		090A65C8266CF408004A1AFC /* PageController+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090A65C7266CF408004A1AFC /* PageController+Helpers.swift */; };
 		0925A5B0244B8455004FD808 /* FloatingTextFieldTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0925A5AF244B8455004FD808 /* FloatingTextFieldTestVC.swift */; };
 		0925A5B2244B88BD004FD808 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0925A5B1244B88BD004FD808 /* Extensions.swift */; };
 		0925A5B6244C0F5B004FD808 /* NumberPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0925A5B5244C0F5B004FD808 /* NumberPadView.swift */; };
@@ -74,6 +75,7 @@
 		0443AA3C24FC1ABC00FA6CEE /* InBornViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InBornViewController.xib; sourceTree = "<group>"; };
 		04E6818724FD2AB1008CC1ED /* LazyTableViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LazyTableViewModel.swift; path = "Pagination TableView/LazyTableViewModel.swift"; sourceTree = "<group>"; };
 		04E6818824FD2AB1008CC1ED /* LazyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LazyTableViewController.swift; path = "Pagination TableView/LazyTableViewController.swift"; sourceTree = "<group>"; };
+		090A65C7266CF408004A1AFC /* PageController+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PageController+Helpers.swift"; sourceTree = "<group>"; };
 		0925A5AF244B8455004FD808 /* FloatingTextFieldTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTextFieldTestVC.swift; sourceTree = "<group>"; };
 		0925A5B1244B88BD004FD808 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		0925A5B5244C0F5B004FD808 /* NumberPadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberPadView.swift; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 				09357AF4266BCCC000B8A9F7 /* PageController.xib */,
 				09357AD8266B8A6900B8A9F7 /* PageIndexCollectionViewController.swift */,
 				09357AE3266B978B00B8A9F7 /* PageIndexCollectionViewController.xib */,
+				090A65C7266CF408004A1AFC /* PageController+Helpers.swift */,
 			);
 			path = "Lazy Pages";
 			sourceTree = "<group>";
@@ -267,6 +270,8 @@
 		0960FEC1266B7BDC001042E1 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				0925A5B1244B88BD004FD808 /* Extensions.swift */,
+				042FF048248FBCE300D1B246 /* Binding.swift */,
 				0960FEC2266B7BE8001042E1 /* Constants.swift */,
 			);
 			path = Helpers;
@@ -294,12 +299,10 @@
 			isa = PBXGroup;
 			children = (
 				0960FEC1266B7BDC001042E1 /* Helpers */,
-				09D74A782444E00D00280E54 /* OptionsViewController.swift */,
-				0925A5B1244B88BD004FD808 /* Extensions.swift */,
-				042FF048248FBCE300D1B246 /* Binding.swift */,
-				0929066B2530CAC00008C80C /* BaseViewController.swift */,
 				09D74A882444E1E400280E54 /* Widgets */,
 				09D74A892444E1F400280E54 /* Supporting Files */,
+				0929066B2530CAC00008C80C /* BaseViewController.swift */,
+				09D74A782444E00D00280E54 /* OptionsViewController.swift */,
 				09D74A822444E00E00280E54 /* Info.plist */,
 			);
 			path = JDAWidgets;
@@ -389,7 +392,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1030;
-				LastUpgradeCheck = 1030;
+				LastUpgradeCheck = 1230;
 				ORGANIZATIONNAME = jda;
 				TargetAttributes = {
 					09D74A722444E00D00280E54 = {
@@ -513,6 +516,7 @@
 				09D74A772444E00D00280E54 /* AppDelegate.swift in Sources */,
 				0926F30D25282FA7008FACFD /* BaseMVVMTableVC.swift in Sources */,
 				09FF2321244B7D9B000A298D /* FloatingTextField.swift in Sources */,
+				090A65C8266CF408004A1AFC /* PageController+Helpers.swift in Sources */,
 				042FF043248FBA7C00D1B246 /* ExpandableTableViewController.swift in Sources */,
 				09357AD9266B8A6900B8A9F7 /* PageIndexCollectionViewController.swift in Sources */,
 				0925A5B8244C1018004FD808 /* GridStackView.swift in Sources */,
@@ -577,6 +581,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -602,7 +607,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -638,6 +643,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -657,7 +663,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -675,7 +681,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 48XGY7ZTAQ;
 				INFOPLIST_FILE = JDAWidgets/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -695,7 +701,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 48XGY7ZTAQ;
 				INFOPLIST_FILE = JDAWidgets/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GridStackView : UIStackView {
+class GridStackView: UIStackView {
     
     private var cells: [UIView] = []
     
@@ -18,7 +18,7 @@ class GridStackView : UIStackView {
     
     let rowHeight: CGFloat
     
-    let paddingBetweenButton:CGFloat = 20.0
+    let paddingBetweenButton: CGFloat = 20.0
     
     init(rowSize: Int, rowHeight: CGFloat) {
         self.rowSize = rowSize
@@ -41,8 +41,7 @@ class GridStackView : UIStackView {
         row.distribution = .fillEqually
         return row
     }
-    
-    
+
     func addCell(view: UIView) {
         self.currentRow?.spacing = paddingBetweenButton
         
@@ -72,7 +71,4 @@ class GridStackView : UIStackView {
     
 }
 
-
-class PlaceHolderView : UIView {
-    
-}
+class PlaceHolderView: UIView { }

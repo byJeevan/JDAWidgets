@@ -8,8 +8,8 @@
 
 import UIKit
 
-//A elegant StackView - Top aligned + scrollable when frame overflows.
-class InBornViewController : UIViewController {
+// A elegant StackView - Top aligned + scrollable when frame overflows.
+class InBornViewController: UIViewController {
 
   @IBOutlet weak var mainStack: UIStackView!
 

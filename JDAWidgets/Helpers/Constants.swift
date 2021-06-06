@@ -8,5 +8,5 @@
 
 import Foundation
 
-
+// Constants for extensions and applicable for each widgets
 struct Constants { }
