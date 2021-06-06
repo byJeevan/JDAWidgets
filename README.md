@@ -1,6 +1,7 @@
 # JDAWidgets
-📦 Collection of Widgets (Swift components) gathered for easy & faster developer life. Interstingly, there no third part framework or library involved. All these widgets stiched from native components with minimal amount of changes.
-List of items discloses following functions in order :
+Collection of swift components packed 📦 for easy & faster feature integrations. Interstingly, there will not be external dependency library involved. All these widgets stiched from native components with minimal amount of changes. 
+
+## List of items discloses following functions in order :
 
 ##### 1. Card Layout view
 - Card view UI extension
