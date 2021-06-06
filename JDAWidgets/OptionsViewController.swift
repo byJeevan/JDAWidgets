@@ -9,18 +9,18 @@
 import UIKit
 
 
-enum WidgetType:String, CaseIterable {
-  case cardView = "Card View in ViewController"
-  case floatingTextField = "Floating Label Text Field"
-  case numberPad = "On screen number pad"
-  case topHeaderPage = "Top Header Menu with Horizontal Paging"
-  case paginationTableView = "Pagination Tableview" // 5
-  case expandableTableView = "Expandable TableView"
-  case scrollableStackCard = "Stack view capable of scrolling when overflows"
-  case mvvmTableViewTemplate = "Table View template for MVVM"
-  case labelExtened = "Extended functional Labels"
-  case galleryDetailedZoom = "Image Gallery with Thumbnail and Zoom support" // 10
-
+enum WidgetType: String, CaseIterable {
+  case cardView = "1. Card View in ViewController"
+  case floatingTextField = "2. Floating Label Text Field"
+  case numberPad = "3. On screen number pad"
+  case topHeaderPage = "4. Top Header Menu with Horizontal Paging"
+  case paginationTableView = "5. Pagination Tableview" // 5
+  case expandableTableView = "6. Expandable TableView"
+  case scrollableStackCard = "7. Stack view capable of scrolling when overflows"
+  case mvvmTableViewTemplate = "8. Table View template for MVVM"
+  case labelExtened = "9. Extended functional Labels"
+  case galleryDetailedZoom = "10. Image Gallery with Thumbnail and Zoom support" // 10
+  case customAlertView = "11. Custom Alert Making"
 }
 
 class OptionViewController: UIViewController {
@@ -103,6 +103,9 @@ private extension OptionViewController {
         UIImage(named: "sample_3")!
       ]
       self.navigationController?.pushViewController(GalleryDetailViewController.init(images: images, defaultIndex: 0), animated: true)
+
+    case .customAlertView:
+      self.navigationController?.pushViewController(AlertUsageViewController(), animated: true)
 
     }
   }

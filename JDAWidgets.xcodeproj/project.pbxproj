@@ -41,6 +41,10 @@
 		09357AEA266B987D00B8A9F7 /* IndexCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09357AE9266B987D00B8A9F7 /* IndexCollectionViewCell.swift */; };
 		09357AED266B9A0F00B8A9F7 /* PageContainerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09357AEC266B9A0F00B8A9F7 /* PageContainerVC.xib */; };
 		09357AF5266BCCC000B8A9F7 /* PageController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09357AF4266BCCC000B8A9F7 /* PageController.xib */; };
+		09357B0D266C683C00B8A9F7 /* AlertUsageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09357B0C266C683C00B8A9F7 /* AlertUsageViewController.swift */; };
+		09357BA7266C6AE000B8A9F7 /* AlertConfigurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09357BA6266C6AE000B8A9F7 /* AlertConfigurations.swift */; };
+		09357BAA266C6B7800B8A9F7 /* ExampleAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09357BA9266C6B7800B8A9F7 /* ExampleAlertView.swift */; };
+		09357BAD266C6BFA00B8A9F7 /* ExampleAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09357BAC266C6BFA00B8A9F7 /* ExampleAlertView.xib */; };
 		0960FE5B266B71B6001042E1 /* GalleryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960FE5A266B71B6001042E1 /* GalleryDetailViewController.swift */; };
 		0960FE5F266B71E5001042E1 /* GalleryDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0960FE5E266B71E5001042E1 /* GalleryDetailViewController.xib */; };
 		0960FEB2266B7693001042E1 /* GalleryImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960FEB1266B7693001042E1 /* GalleryImageCell.swift */; };
@@ -94,6 +98,10 @@
 		09357AE9266B987D00B8A9F7 /* IndexCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexCollectionViewCell.swift; sourceTree = "<group>"; };
 		09357AEC266B9A0F00B8A9F7 /* PageContainerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PageContainerVC.xib; sourceTree = "<group>"; };
 		09357AF4266BCCC000B8A9F7 /* PageController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PageController.xib; sourceTree = "<group>"; };
+		09357B0C266C683C00B8A9F7 /* AlertUsageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertUsageViewController.swift; sourceTree = "<group>"; };
+		09357BA6266C6AE000B8A9F7 /* AlertConfigurations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertConfigurations.swift; sourceTree = "<group>"; };
+		09357BA9266C6B7800B8A9F7 /* ExampleAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleAlertView.swift; sourceTree = "<group>"; };
+		09357BAC266C6BFA00B8A9F7 /* ExampleAlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExampleAlertView.xib; sourceTree = "<group>"; };
 		0960FE5A266B71B6001042E1 /* GalleryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryDetailViewController.swift; sourceTree = "<group>"; };
 		0960FE5E266B71E5001042E1 /* GalleryDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryDetailViewController.xib; sourceTree = "<group>"; };
 		0960FEB1266B7693001042E1 /* GalleryImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryImageCell.swift; sourceTree = "<group>"; };
@@ -231,6 +239,17 @@
 			path = "Lazy Pages";
 			sourceTree = "<group>";
 		};
+		09357B0B266C67F800B8A9F7 /* 11 Alert view */ = {
+			isa = PBXGroup;
+			children = (
+				09357B0C266C683C00B8A9F7 /* AlertUsageViewController.swift */,
+				09357BA6266C6AE000B8A9F7 /* AlertConfigurations.swift */,
+				09357BA9266C6B7800B8A9F7 /* ExampleAlertView.swift */,
+				09357BAC266C6BFA00B8A9F7 /* ExampleAlertView.xib */,
+			);
+			path = "11 Alert view";
+			sourceTree = "<group>";
+		};
 		0960FE57266B70E2001042E1 /* 10 Gallery Detail Zoom */ = {
 			isa = PBXGroup;
 			children = (
@@ -299,6 +318,7 @@
 				0926F30B25282F48008FACFD /* 8 MVVM tableview */,
 				0929066D2530CB720008C80C /* 9 Extended Labels */,
 				0960FE57266B70E2001042E1 /* 10 Gallery Detail Zoom */,
+				09357B0B266C67F800B8A9F7 /* 11 Alert view */,
 			);
 			path = Widgets;
 			sourceTree = "<group>";
@@ -404,6 +424,7 @@
 				09357AED266B9A0F00B8A9F7 /* PageContainerVC.xib in Resources */,
 				09D74A812444E00E00280E54 /* LaunchScreen.storyboard in Resources */,
 				042FF04D248FC69100D1B246 /* CollapsibleTableViewHeader.xib in Resources */,
+				09357BAD266C6BFA00B8A9F7 /* ExampleAlertView.xib in Resources */,
 				09D74A7E2444E00E00280E54 /* Assets.xcassets in Resources */,
 				0443AA3D24FC1ABC00FA6CEE /* InBornViewController.xib in Resources */,
 				0925A5BC244C256A004FD808 /* AmountPadViewController.xib in Resources */,
@@ -471,6 +492,7 @@
 				0960FEBE266B77C4001042E1 /* ImageScrollView.swift in Sources */,
 				042FF047248FBC7800D1B246 /* CollapsibleHeaderViewModel.swift in Sources */,
 				0929066F2530CB930008C80C /* ExtendedLabelVC.swift in Sources */,
+				09357BA7266C6AE000B8A9F7 /* AlertConfigurations.swift in Sources */,
 				0926F3132528356D008FACFD /* DemoTableCellView.swift in Sources */,
 				09D74A792444E00D00280E54 /* OptionsViewController.swift in Sources */,
 				0925A5B0244B8455004FD808 /* FloatingTextFieldTestVC.swift in Sources */,
@@ -480,6 +502,7 @@
 				09D74A8B2444E31800280E54 /* WidgetCardViewController.swift in Sources */,
 				0929066C2530CAC00008C80C /* BaseViewController.swift in Sources */,
 				042FF049248FBCE300D1B246 /* Binding.swift in Sources */,
+				09357B0D266C683C00B8A9F7 /* AlertUsageViewController.swift in Sources */,
 				0960FEB8266B76EF001042E1 /* GalleryThumbImageCell.swift in Sources */,
 				09357AEA266B987D00B8A9F7 /* IndexCollectionViewCell.swift in Sources */,
 				0960FEC3266B7BE8001042E1 /* Constants.swift in Sources */,
@@ -494,6 +517,7 @@
 				09357AD9266B8A6900B8A9F7 /* PageIndexCollectionViewController.swift in Sources */,
 				0925A5B8244C1018004FD808 /* GridStackView.swift in Sources */,
 				04E6818A24FD2AB1008CC1ED /* LazyTableViewController.swift in Sources */,
+				09357BAA266C6B7800B8A9F7 /* ExampleAlertView.swift in Sources */,
 				0960FEB2266B7693001042E1 /* GalleryImageCell.swift in Sources */,
 				09357ADC266B8AD100B8A9F7 /* PageContainerVC.swift in Sources */,
 				0926F3152528359C008FACFD /* DemoHeaderFooterView.swift in Sources */,
