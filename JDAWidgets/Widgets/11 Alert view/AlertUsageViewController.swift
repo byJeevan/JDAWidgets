@@ -30,3 +30,8 @@ class AlertUsageViewController: BaseViewController {
     exampleAlertView.showAlert()
   }
 }
+
+// Closures must be week
+// Bottom to top.
+// optimize code
+//

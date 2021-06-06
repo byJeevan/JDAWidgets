@@ -28,6 +28,7 @@ protocol AlertPresentable {
   var alertPresentingStyle: AlertPresentingStyle? { get }
   var parentViewController: UIViewController? { get }
   var alertShadowStyle: AlertShadowStyle? { get }
+  func didDismissed()
 }
 
 extension AlertPresentable {
@@ -124,9 +125,11 @@ private extension AlertPresentable {
     })
   }
 
-  func dismissAsPopup(_ topViewController: UIViewController, animated:Bool) {
+  func dismissAsPopup(_ topViewController: UIViewController, animated: Bool) {
     if topViewController.view.tag == 2_605 { // Make sure dismissing right controller
-      topViewController.dismiss(animated: animated, completion: nil)
+      topViewController.dismiss(animated: animated, completion: {
+        didDismissed()
+      })
     }
   }
 }
