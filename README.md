@@ -42,4 +42,4 @@ Collection of swift components packed 📦 for easy & faster feature integration
 - Display style Popup, Top-to-bottom, Bottom-to-Top
 
 
-![Screenshot](https://github.com/byJeevan/JDAWidgets/blob/master/Simulator%20Screen%20Shot%20-%20iPhone%208%20-%202020-06-05%20at%2000.01.17.png?raw=true "Preview")
+![Screenshot](https://github.com/byJeevan/JDAWidgets/blob/master/screenshot_widget_list.png?raw=true "Preview")
