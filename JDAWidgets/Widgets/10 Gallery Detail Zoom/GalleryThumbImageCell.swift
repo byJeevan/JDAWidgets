@@ -25,7 +25,7 @@ class GalleryThumbImageCell: UICollectionViewCell {
     self.setupCell(nil, tag: -1) // instead of nil, you can use place holder image
   }
 
-  func setupCell(_ image: UIImage?, tag:Int) {
+  func setupCell(_ image: UIImage?, tag: Int) {
     thumbImageView.tag = tag
     thumbImageView.image = image
   }
@@ -37,5 +37,3 @@ private extension GalleryThumbImageCell {
     self.layer.borderWidth = 1.5
   }
 }
-
-

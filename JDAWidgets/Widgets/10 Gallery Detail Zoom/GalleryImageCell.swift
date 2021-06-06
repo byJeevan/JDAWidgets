@@ -26,7 +26,7 @@ class GalleryImageCell: UICollectionViewCell {
     self.setupCell(nil, tag: -1) // instead of nil, you can use place holder image
   }
 
-  public func setupCell(_ image:UIImage?, tag:Int) {
+  public func setupCell(_ image: UIImage?, tag: Int) {
     galleryImageView?.tag = tag
     galleryImageView?.image = image
   }
@@ -53,4 +53,3 @@ extension GalleryImageCell: UIScrollViewDelegate {
     self.imageScrollView.setZoomScale(self.imageScrollView.minimumZoomScale, animated: false)
   }
 }
-

@@ -116,7 +116,7 @@ extension PageContainerVC: PageControllerDataSource {
   }
 }
 
-extension PageContainerVC : PageIndexCollectionViewControllerDataSource {
+extension PageContainerVC: PageIndexCollectionViewControllerDataSource {
 
   func sizeForItem(at indexPath: IndexPath) -> CGSize {
     let titleString = categories[indexPath.row]
@@ -125,10 +125,9 @@ extension PageContainerVC : PageIndexCollectionViewControllerDataSource {
   }
 
   func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "IndexCollectionViewCell", for: indexPath as IndexPath) as! IndexCollectionViewCell
-    cell.indexLabel.text = categories[indexPath.row]
-    return cell
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "IndexCollectionViewCell", for: indexPath as IndexPath) as? IndexCollectionViewCell
+    cell?.indexLabel.text = categories[indexPath.row]
+    return cell ?? UICollectionViewCell()
   }
 
 }
-

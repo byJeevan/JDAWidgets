@@ -1,0 +1,6 @@
+framework module Pods_JDAWidgets {
+  umbrella header "Pods-JDAWidgets-umbrella.h"
+
+  export *
+  module * { export * }
+}
