@@ -31,10 +31,14 @@ extension ExampleAlertView: AlertPresentable {
   }
 
   var alertPresentingStyle: AlertPresentingStyle? {
-    .topDown
+    .popover
   }
 
   var parentViewController: UIViewController? {
     UIApplication.shared.topViewController()
+  }
+
+  func didDismissed() {
+    print("Alert Dismissed")
   }
 }
