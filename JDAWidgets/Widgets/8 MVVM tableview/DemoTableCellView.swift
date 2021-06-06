@@ -8,18 +8,16 @@
 
 import UIKit
 
-class DemoTableCellView : UITableViewCell {
-   
-    var cellViewModel:DemoTableCellViewModel? {
-        didSet{
-            self.textLabel?.text = cellViewModel?.content
-            self.textLabel?.numberOfLines = 10
-        }
+class DemoTableCellView: UITableViewCell {
+
+  var cellViewModel: DemoTableCellViewModel? {
+    didSet {
+      self.textLabel?.text = cellViewModel?.content
+      self.textLabel?.numberOfLines = 10
     }
-    
-    //Do more UI stuffs
+  }
 }
 
-struct DemoTableCellViewModel:RowRepresentable {
-    var content:String?
+struct DemoTableCellViewModel: RowRepresentable {
+  var content: String?
 }

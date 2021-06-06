@@ -12,7 +12,7 @@ import UIKit
 /*
  * Consists of Topbar menus and pages
  */
-class PageContainerVC : UIViewController {
+class PageContainerVC: UIViewController {
 
   @IBOutlet weak var pageContainerView: UIView!
   @IBOutlet weak var collectionContainerView: UIView!
@@ -47,7 +47,7 @@ class PageContainerVC : UIViewController {
     addMenus()
   }
 
-  //2. View Controllers created for menu
+  // 2. View Controllers created for menu
   private func setPageViewControllers() {
     viewControllersToLoad = []
     for _ in (0..<categories.count) {
@@ -56,8 +56,8 @@ class PageContainerVC : UIViewController {
       viewControllersToLoad.append(innerVC)
     }
   }
-  private func addPages(){
-    let vcOfNewsPage:PageController = PageController(nibName: "PageController", bundle: nil)
+  private func addPages() {
+    let vcOfNewsPage: PageController = PageController(nibName: "PageController", bundle: nil)
     vcOfNewsPage.view.frame = self.pageContainerView.bounds
     self.pageContainerView.addSubview(vcOfNewsPage.view)
     self.addChild(vcOfNewsPage)
@@ -66,7 +66,7 @@ class PageContainerVC : UIViewController {
     self.pageController?.dataSource = self
   }
 
-  private func addMenus(){
+  private func addMenus() {
     let vcOfNewsMenuPage = PageIndexCollectionViewController(nibName: "PageIndexCollectionViewController", bundle: nil)
     vcOfNewsMenuPage.view.frame = self.collectionContainerView.bounds
     self.collectionContainerView.addSubview(vcOfNewsMenuPage.view)
@@ -81,7 +81,7 @@ class PageContainerVC : UIViewController {
 //    vcOfNewsMenuPage.collectionView.backgroundColor =  UIColor.gray
   }
 
-  private func setupMenuCollectionUI(){
+  private func setupMenuCollectionUI() {
     if let menuCollectionView = self.pageIndex?.collectionView {
 
       menuCollectionView.register(UINib(nibName: "IndexCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "IndexCollectionViewCell")
@@ -120,7 +120,7 @@ extension PageContainerVC: PageIndexCollectionViewControllerDataSource {
 
   func sizeForItem(at indexPath: IndexPath) -> CGSize {
     let titleString = categories[indexPath.row]
-    let titleSize = (titleString).size(withAttributes:[.font: UIFont.systemFont(ofSize: 20.0)])
+    let titleSize = (titleString).size(withAttributes: [.font: UIFont.systemFont(ofSize: 20.0)])
     return CGSize(width: titleSize.width, height: menuCellSize.height)
   }
 

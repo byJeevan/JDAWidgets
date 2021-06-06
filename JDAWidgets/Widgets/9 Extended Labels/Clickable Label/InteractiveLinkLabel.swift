@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 class InteractiveLinkLabel: UILabel {
     
     required init(coder aDecoder: NSCoder) {

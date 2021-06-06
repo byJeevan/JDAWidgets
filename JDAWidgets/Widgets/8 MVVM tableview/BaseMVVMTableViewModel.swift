@@ -9,42 +9,40 @@
 import Foundation
 
 class BaseMVVMTableViewModel {
-
+  
   var dataSource = Binding<[TableSection]>.init(value: [])
-
+  
   init() {
-    //set datasource from webpage/db/local etc.
+    // set datasource from webpage/db/local etc.
     self.testDataSource()
   }
-
-  //MARK:- Getters
-  var numberOfSection:Int {
-    get {
-      return self.dataSource.value.count
-    }
+  
+  // MARK: - Getters
+  var numberOfSection: Int {
+    return self.dataSource.value.count
   }
-
-  func numberOfRows(at section:Int) -> Int? {
+  
+  func numberOfRows(at section: Int) -> Int? {
     return self.dataSource.value[section].rows?.count
   }
-
-  func sectionItem(at section:Int) -> DemoHeaderFooterViewModel? {
+  
+  func sectionItem(at section: Int) -> DemoHeaderFooterViewModel? {
     return self.dataSource.value[section].header as? DemoHeaderFooterViewModel
   }
-
-  func rowItem(at indexPath:IndexPath) -> DemoTableCellViewModel? {
+  
+  func rowItem(at indexPath: IndexPath) -> DemoTableCellViewModel? {
     return self.dataSource.value[indexPath.section].rows?[indexPath.row] as? DemoTableCellViewModel
   }
-
+  
 }
 
 extension BaseMVVMTableViewModel {
-
-  //Test data source
-  func testDataSource(){
-
+  
+  // Test data source
+  func testDataSource() {
+    
     let titles = ["iPhone Models", "Mac Models", "Watch Models"]
-
+    
     let subtitles = [
       ["""
       iPhone 5: Single-camera system (Wide)
@@ -53,26 +51,26 @@ extension BaseMVVMTableViewModel {
       \n Pro display. \n Pro performance
       """],
       ["Macbook Air", "Macbook Pro", "iMac", "iMac Pro"],
-      ["Series 1", "Series 2", ]
+      ["Series 1", "Series 2"]
     ]
     
     var tempDataSource = [TableSection]()
-
+    
     for (index, title) in titles.enumerated() {
       var section = TableSection()
       section.header = DemoHeaderFooterViewModel(headerTitle: title)
-
+      
       var tempRows = [DemoTableCellViewModel]()
-
+      
       subtitles[index].forEach { (subtitle) in
         tempRows.append(DemoTableCellViewModel(content: subtitle))
       }
-
+      
       section.rows = tempRows
-
+      
       tempDataSource.append(section)
     }
-
+    
     self.dataSource.value = tempDataSource
   }
 }

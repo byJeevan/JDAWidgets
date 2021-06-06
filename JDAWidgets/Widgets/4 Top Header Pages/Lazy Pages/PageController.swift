@@ -145,7 +145,8 @@ public class PageController: UIViewController {
     page.view.alpha = 1.0
     pageViewController.setViewControllers([page], direction: direction, animated: animated, completion: { _ in
       DispatchQueue.main.async {
-        self.pageIndexController?.collectionView.selectItem(at: IndexPath(row: index, section: 0), animated: true, scrollPosition: .centeredHorizontally)
+        let selectedIndexPath = IndexPath(row: index, section: 0)
+        self.pageIndexController?.collectionView.selectItem(at: selectedIndexPath, animated: true, scrollPosition: .centeredHorizontally)
         self.handleNavigation(to: index)
         self.setScrollViewDelegate(self)
       }
@@ -263,62 +264,5 @@ extension PageController: UIScrollViewDelegate {
     let pageFraction = relativeOffset / width
     let floatIndex = scrollView.contentOffset.x >= width ? index + pageFraction : index - (1.0 - pageFraction)
     pageIndexController?.scrollToPosition(around: floatIndex)
-  }
-}
-
-
-//
-//  ViewController+Index.swift
-//  LazyPages
-//
-//  Created by Vargas Casaseca, Cesar on 23.03.16.
-//  Copyright © 2016 WeltN24. All rights reserved.
-//
-
-import ObjectiveC
-import UIKit
-
-// Declare a global var to produce a unique address as the assoc object handle
-var associatedObjectHandle: UInt8 = 0
-
-extension UIViewController {
-  var index: Int? {
-    get {
-      objc_getAssociatedObject(self, &associatedObjectHandle) as? Int
-    }
-    set {
-      objc_setAssociatedObject(self, &associatedObjectHandle, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-    }
-  }
-}
-
-extension UIView {
-  /**
-   Adds the subview to the view, adjusting its edges to self
-
-   - parameter subView: The view to be added an pinned
-   */
-  func addAndPinSubView(subView: UIView) {
-    addSubview(subView)
-
-    var viewBindingsDict = [String: AnyObject]()
-    viewBindingsDict["subView"] = subView
-    addConstraints(
-      NSLayoutConstraint.constraints(
-        withVisualFormat: "H:|[subView]|",
-        options: [],
-        metrics: nil,
-        views: viewBindingsDict
-      )
-    )
-
-    addConstraints(
-      NSLayoutConstraint.constraints(
-        withVisualFormat: "V:|[subView]|",
-        options: [],
-        metrics: nil,
-        views: viewBindingsDict
-      )
-    )
   }
 }

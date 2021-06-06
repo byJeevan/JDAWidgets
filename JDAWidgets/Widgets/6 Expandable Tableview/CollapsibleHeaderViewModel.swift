@@ -10,14 +10,14 @@ import Foundation
 
 
 class CollapsibleHeaderViewModel {
-     var headerTitle = Binding<String>.init(value: "")
-     var isCollpased = Binding<Bool>.init(value:true) //Important
-     var sectionId:Int? //Important
-
-     init(headerTitle:String?, isCollpased:Bool?, sectionId:Int?) {
-         self.headerTitle.value = headerTitle ?? ""
-         self.isCollpased.value = isCollpased ?? true
-         self.sectionId = sectionId ?? 0
-     }
-
+  var headerTitle = Binding<String>.init(value: "")
+  var isCollpased = Binding<Bool>.init(value:true) // Important
+  var sectionId: Int? // Important
+  
+  init(headerTitle:String?, isCollpased:Bool?, sectionId:Int?) {
+    self.headerTitle.value = headerTitle ?? ""
+    self.isCollpased.value = isCollpased ?? true
+    self.sectionId = sectionId ?? 0
+  }
+  
 }

@@ -8,37 +8,36 @@
 
 import UIKit
 
-class DemoHeaderFooterView : UITableViewHeaderFooterView {
-   
-    var headerViewModel:DemoHeaderFooterViewModel?{
-        didSet{
-            //todo-add a lable title.
-            titleLabel?.text = headerViewModel?.headerTitle
-        }
-    }
-    
-    private var titleLabel:UILabel?
-    
-    override init(reuseIdentifier: String?) {
-        super.init(reuseIdentifier: reuseIdentifier)
-        commonInit()
-    }
+class DemoHeaderFooterView: UITableViewHeaderFooterView {
 
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        commonInit()
+  var headerViewModel: DemoHeaderFooterViewModel? {
+    didSet {
+      titleLabel?.text = headerViewModel?.headerTitle
     }
+  }
 
-    func commonInit() {
-        self.titleLabel = UILabel()
-        self.titleLabel?.textColor = .red
-        self.titleLabel?.sizeToFit()
-        self.titleLabel?.frame = CGRect.init(x: 20, y: 0, width: 200, height: 30)
-        self.addSubview(self.titleLabel!)
-    }
- 
+  private var titleLabel: UILabel?
+
+  override init(reuseIdentifier: String?) {
+    super.init(reuseIdentifier: reuseIdentifier)
+    commonInit()
+  }
+
+  required init?(coder aDecoder: NSCoder) {
+    super.init(coder: aDecoder)
+    commonInit()
+  }
+
+  func commonInit() {
+    self.titleLabel = UILabel()
+    self.titleLabel?.textColor = .red
+    self.titleLabel?.sizeToFit()
+    self.titleLabel?.frame = CGRect.init(x: 20, y: 0, width: 200, height: 30)
+    self.addSubview(self.titleLabel!)
+  }
+
 }
 
-struct DemoHeaderFooterViewModel:HeaderFooterRepresentable {
-    var headerTitle:String?
+struct DemoHeaderFooterViewModel: HeaderFooterRepresentable {
+    var headerTitle: String?
 }

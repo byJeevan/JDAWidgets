@@ -11,10 +11,10 @@ import UIKit
 class LazyTableViewController : UIViewController {
     
     // MARK: - Public properties
-    private var tableView:UITableView = UITableView.init(frame: .zero, style: .grouped) //any style.
+    private var tableView: UITableView = UITableView.init(frame: .zero, style: .grouped) // .grouped or any style.
     let spinner = UIActivityIndicatorView(style: .gray)
     
-    private var dataSource:[String] = ["Pull up to add more rows..."]
+    private var dataSource:[String] = ["Pull Down To Add More Rows."]
     
     // MARK: - View Controller Lifecycle
     override func viewDidLoad() {
@@ -56,7 +56,7 @@ class LazyTableViewController : UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
             self.dataSource.append("\(Date.timeIntervalSinceReferenceDate)")
             
-            //stop spinning and reload table.(or Section will much better)
+            // stop spinning and reload table.(or Section will much better)
             self.spinner.stopAnimating()
             self.tableView.reloadData()
         }
@@ -65,6 +65,7 @@ class LazyTableViewController : UIViewController {
 }
 
 extension LazyTableViewController: UITableViewDelegate, UITableViewDataSource {
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataSource.count
     }
@@ -82,16 +83,7 @@ extension LazyTableViewController: UITableViewDelegate, UITableViewDataSource {
             indexPath.row == numberOfRows {
         }
     }
-    
-//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//      let isReachingEnd = scrollView.contentOffset.y >= 0
-//          && scrollView.contentOffset.y >= (scrollView.contentSize.height - scrollView.frame.size.height)
-//        if isReachingEnd {
-//            print("Reached End")
-//            retriedData()
-//        }
-//    }
-    
+
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let offset = scrollView.contentOffset
         let bounds = scrollView.bounds
