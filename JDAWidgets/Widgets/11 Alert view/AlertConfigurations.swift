@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 enum AlertPresentingStyle {
-  case popover
+  case popIn
   case topDown
   case bottomUp
 }
@@ -24,7 +24,7 @@ enum AlertShadowStyle {
   }
 }
 
-protocol AlertPresentable {
+protocol AlertPresentable: class {
   var alertPresentingStyle: AlertPresentingStyle? { get }
   var parentViewController: UIViewController? { get }
   var alertShadowStyle: AlertShadowStyle? { get }
@@ -44,22 +44,26 @@ extension AlertPresentable {
     parentAlertView.frame = topViewController.view.bounds
     parentAlertView.backgroundColor = self.alertShadowStyle?.shadowColor
     parentAlertView.addSubview(alertView)
-    parentAlertView.tag = 2_605
+    parentAlertView.tag = alertIdentifier
     alertView.isHidden = false
+    parentAlertViewController.modalPresentationStyle = .overCurrentContext
 
     switch alertPresentingStyle {
 
-    case .popover :
-      parentAlertViewController.modalPresentationStyle = .overCurrentContext
+    case .popIn :
       parentAlertViewController.modalTransitionStyle = .crossDissolve
       setAlertViewContraints(targetView: alertView, parentView: parentAlertViewController.view)
       presentAsPopup(topViewController, parentAlertViewController)
 
     case .topDown:
-      parentAlertViewController.modalPresentationStyle = .overCurrentContext
       parentAlertViewController.modalTransitionStyle = .coverVertical
-      setSlideFromTopViewContraints(targetView: alertView, parentView: parentAlertView)
+      setSlideFromTopORBottomViewContraints(targetView: alertView, parentView: parentAlertView)
       presentAsTopdown(alertView, topViewController, parentAlertViewController)
+
+    case .bottomUp:
+      parentAlertViewController.modalTransitionStyle = .coverVertical
+      setSlideFromTopORBottomViewContraints(targetView: alertView, parentView: parentAlertView)
+      presentAsBottomUp(alertView, topViewController, parentAlertViewController)
 
     default:
       break
@@ -70,10 +74,12 @@ extension AlertPresentable {
     guard let alertView = self as? UIView,
           let topViewController = self.parentViewController else { return } // Make sure the alert view of type UIView
     switch alertPresentingStyle {
-    case .popover:
+    case .popIn:
       dismissAsPopup(topViewController, animated: true)
     case .topDown:
       dismissAsBottomToTop(alertView, topViewController)
+    case .bottomUp:
+      dismissAsTopToBottom(alertView, topViewController)
     default:
       break
     }
@@ -83,20 +89,30 @@ extension AlertPresentable {
 
 private extension AlertPresentable {
 
+  var alertIdentifier: Int {
+    return 2_6056
+  }
+
   func setAlertViewContraints(targetView: UIView, parentView: UIView) {
-    let alertWidthMultiplier: CGFloat = 0.75
     targetView.translatesAutoresizingMaskIntoConstraints = false
-    targetView.widthAnchor.constraint(equalTo: parentView.widthAnchor, multiplier: alertWidthMultiplier).isActive = true
+    targetView.widthAnchor.constraint(equalToConstant: dialogWidthCalculated).isActive = true
     targetView.centerXAnchor.constraint(equalTo: parentView.centerXAnchor).isActive = true
     targetView.centerYAnchor.constraint(equalTo: parentView.centerYAnchor).isActive = true
   }
 
-  func setSlideFromTopViewContraints(targetView: UIView, parentView: UIView) {
+  func setSlideFromTopORBottomViewContraints(targetView: UIView, parentView: UIView) {
     targetView.translatesAutoresizingMaskIntoConstraints = false
     targetView.leadingAnchor.constraint(equalTo: parentView.leadingAnchor).isActive = true
     targetView.trailingAnchor.constraint(equalTo: parentView.trailingAnchor).isActive = true
   }
 
+  var dialogWidthCalculated: CGFloat {
+    let multiplier: CGFloat = UIDevice.current.userInterfaceIdiom == .pad ? 0.5 : 0.75
+    let screenMinBound: CGFloat = min(UIScreen.main.bounds.width, UIScreen.main.bounds.height)
+    return multiplier * screenMinBound
+  }
+
+  // MARK: - Presenters
   func presentAsPopup(_ topViewController: UIViewController, _ parentAlertViewController: UIViewController) {
     topViewController.present(parentAlertViewController, animated: true, completion: nil)
   }
@@ -106,10 +122,33 @@ private extension AlertPresentable {
     topViewController.present(parentAlertViewController, animated: false) { () -> Void in
       alertView.frame = CGRect(x: 0, y: -alertView.frame.height, width: alertView.frame.width, height: alertView.frame.height)
       alertView.alpha = 1
-      UIView.animate(withDuration: 0.2, animations: { () -> Void in
+      UIView.animate(withDuration: 0.25, animations: { () -> Void in
         alertView.frame = CGRect(x: 0, y: 0, width: alertView.frame.width, height: alertView.frame.height)
       },
       completion: nil)
+    }
+  }
+
+  func presentAsBottomUp(_ alertView: UIView, _ topViewController: UIViewController, _ parentAlertViewController: UIViewController) {
+    alertView.alpha = 0
+    topViewController.present(parentAlertViewController, animated: false) { () -> Void in
+      alertView.frame = CGRect(x: 0, y: topViewController.view.bounds.height,
+                               width: alertView.frame.width, height: alertView.frame.height)
+      alertView.alpha = 1
+      UIView.animate(withDuration: 0.25, animations: { () -> Void in
+        alertView.frame = CGRect(x: 0, y: topViewController.view.bounds.height - alertView.frame.height,
+                                 width: alertView.frame.width, height: alertView.frame.height)
+      },
+      completion: nil)
+    }
+  }
+
+  // MARK: - Dismissers
+  func dismissAsPopup(_ topViewController: UIViewController, animated: Bool) {
+    if topViewController.view.tag == alertIdentifier { // Make sure dismissing right controller
+      topViewController.dismiss(animated: animated, completion: { [weak self] in
+        self?.didDismissed()
+      })
     }
   }
 
@@ -117,24 +156,29 @@ private extension AlertPresentable {
     UIView.animate(withDuration: 0.2, animations: { () -> Void in
       alertView.frame = CGRect(x: 0, y: -alertView.frame.height, width: alertView.frame.width, height: alertView.frame.height)
     },
-    completion: { complete -> Void in
+    completion: { [weak self] complete -> Void in
       alertView.isHidden = true
       if complete {
-        dismissAsPopup(topViewController, animated: false)
+        self?.dismissAsPopup(topViewController, animated: false)
       }
     })
   }
 
-  func dismissAsPopup(_ topViewController: UIViewController, animated: Bool) {
-    if topViewController.view.tag == 2_605 { // Make sure dismissing right controller
-      topViewController.dismiss(animated: animated, completion: {
-        didDismissed()
-      })
-    }
+  func dismissAsTopToBottom(_ alertView: UIView, _ topViewController: UIViewController) {
+    UIView.animate(withDuration: 0.2, animations: { () -> Void in
+      alertView.frame = CGRect(x: 0, y: topViewController.view.bounds.height, width: alertView.frame.width, height: alertView.frame.height)
+    },
+    completion: { [weak self] complete -> Void in
+      alertView.isHidden = true
+      if complete {
+        self?.dismissAsPopup(topViewController, animated: false)
+      }
+    })
   }
 }
 
 extension UIApplication {
+
   func topViewController() -> UIViewController? {
     var topViewController: UIViewController?
     if #available(iOS 13, *) {

@@ -21,6 +21,7 @@ class ExampleAlertView: UIView {
   @IBAction private func closeAction(_ sender: Any) {
     self.hideAlert()
   }
+
 }
 
 // MARK: - Alert Presentable Protocols
@@ -31,7 +32,7 @@ extension ExampleAlertView: AlertPresentable {
   }
 
   var alertPresentingStyle: AlertPresentingStyle? {
-    .popover
+    .popIn
   }
 
   var parentViewController: UIViewController? {
@@ -41,4 +42,5 @@ extension ExampleAlertView: AlertPresentable {
   func didDismissed() {
     print("Alert Dismissed")
   }
+
 }

@@ -52,7 +52,6 @@
 		0960FEB5266B76C7001042E1 /* GalleryImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0960FEB4266B76C7001042E1 /* GalleryImageCell.xib */; };
 		0960FEB8266B76EF001042E1 /* GalleryThumbImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960FEB7266B76EF001042E1 /* GalleryThumbImageCell.swift */; };
 		0960FEBB266B7714001042E1 /* GalleryThumbImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0960FEBA266B7714001042E1 /* GalleryThumbImageCell.xib */; };
-		0960FEBE266B77C4001042E1 /* ImageScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960FEBD266B77C4001042E1 /* ImageScrollView.swift */; };
 		0960FEC3266B7BE8001042E1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960FEC2266B7BE8001042E1 /* Constants.swift */; };
 		09D74A772444E00D00280E54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D74A762444E00D00280E54 /* AppDelegate.swift */; };
 		09D74A792444E00D00280E54 /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D74A782444E00D00280E54 /* OptionsViewController.swift */; };
@@ -110,7 +109,6 @@
 		0960FEB4266B76C7001042E1 /* GalleryImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryImageCell.xib; sourceTree = "<group>"; };
 		0960FEB7266B76EF001042E1 /* GalleryThumbImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryThumbImageCell.swift; sourceTree = "<group>"; };
 		0960FEBA266B7714001042E1 /* GalleryThumbImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryThumbImageCell.xib; sourceTree = "<group>"; };
-		0960FEBD266B77C4001042E1 /* ImageScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScrollView.swift; sourceTree = "<group>"; };
 		0960FEC2266B7BE8001042E1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		09D74A732444E00D00280E54 /* JDAWidgets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JDAWidgets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09D74A762444E00D00280E54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -262,7 +260,6 @@
 				0960FEB4266B76C7001042E1 /* GalleryImageCell.xib */,
 				0960FEB7266B76EF001042E1 /* GalleryThumbImageCell.swift */,
 				0960FEBA266B7714001042E1 /* GalleryThumbImageCell.xib */,
-				0960FEBD266B77C4001042E1 /* ImageScrollView.swift */,
 			);
 			path = "10 Gallery Detail Zoom";
 			sourceTree = "<group>";
@@ -492,7 +489,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0960FEBE266B77C4001042E1 /* ImageScrollView.swift in Sources */,
 				042FF047248FBC7800D1B246 /* CollapsibleHeaderViewModel.swift in Sources */,
 				0929066F2530CB930008C80C /* ExtendedLabelVC.swift in Sources */,
 				09357BA7266C6AE000B8A9F7 /* AlertConfigurations.swift in Sources */,

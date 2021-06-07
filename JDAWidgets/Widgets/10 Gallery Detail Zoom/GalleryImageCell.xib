@@ -11,14 +11,27 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GalleryImageCell" id="a1b-Ck-99M" customClass="GalleryImageCell" customModule="JDAWidgets" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="118" height="124"/>
+            <rect key="frame" x="0.0" y="0.0" width="84" height="88"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="9Wo-rN-pmc">
-                <rect key="frame" x="0.0" y="0.0" width="118" height="124"/>
+                <rect key="frame" x="0.0" y="0.0" width="84" height="88"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EOs-WA-Vgq" customClass="ImageScrollView" customModule="JDAWidgets" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="118" height="124"/>
+                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EOs-WA-Vgq">
+                        <rect key="frame" x="0.0" y="0.0" width="84" height="88"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play" translatesAutoresizingMaskIntoConstraints="NO" id="Sjs-Zf-UKy">
+                                <rect key="frame" x="0.0" y="0.0" width="84" height="88"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Sjs-Zf-UKy" secondAttribute="trailing" id="Ibm-cd-50E"/>
+                            <constraint firstItem="Sjs-Zf-UKy" firstAttribute="width" secondItem="EOs-WA-Vgq" secondAttribute="width" id="NJI-6i-dD0"/>
+                            <constraint firstItem="Sjs-Zf-UKy" firstAttribute="top" secondItem="EOs-WA-Vgq" secondAttribute="top" id="Yuz-yo-tdX"/>
+                            <constraint firstItem="Sjs-Zf-UKy" firstAttribute="height" secondItem="EOs-WA-Vgq" secondAttribute="height" id="iFy-iF-Dgi"/>
+                            <constraint firstAttribute="bottom" secondItem="Sjs-Zf-UKy" secondAttribute="bottom" id="qzh-7A-ksg"/>
+                            <constraint firstItem="Sjs-Zf-UKy" firstAttribute="leading" secondItem="EOs-WA-Vgq" secondAttribute="leading" id="yyp-TW-lP1"/>
+                        </constraints>
                     </scrollView>
                 </subviews>
                 <constraints>
@@ -28,11 +41,15 @@
                     <constraint firstItem="EOs-WA-Vgq" firstAttribute="top" secondItem="9Wo-rN-pmc" secondAttribute="top" id="shg-y9-Z9F"/>
                 </constraints>
             </collectionViewCellContentView>
-            <size key="customSize" width="118" height="124"/>
+            <size key="customSize" width="84" height="88"/>
             <connections>
-                <outlet property="imageScrollView" destination="EOs-WA-Vgq" id="LKs-6E-43h"/>
+                <outlet property="galleryImageView" destination="Sjs-Zf-UKy" id="n68-WY-5vy"/>
+                <outlet property="imageScrollView" destination="EOs-WA-Vgq" id="l1U-z4-O0q"/>
             </connections>
-            <point key="canvasLocation" x="189.85507246376812" y="117.1875"/>
+            <point key="canvasLocation" x="-49.275362318840585" y="106.47321428571428"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="play" width="72" height="72"/>
+    </resources>
 </document>

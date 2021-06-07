@@ -19,7 +19,7 @@ enum WidgetType: String, CaseIterable {
   case mvvmTableViewTemplate = "8. Table View template for MVVM"
   case labelExtened = "9. Extended functional Labels"
   case galleryDetailedZoom = "10. Image Gallery with Thumbnail and Zoom support" // 10
-  case customAlertView = "11. Custom Alert apply on any view"
+  case customAlertView = "11. Any UIView into Custom Alert (100% with protocol extension)"
 }
 
 class OptionViewController: UIViewController {
