@@ -9,15 +9,13 @@
 import Foundation
 import UIKit
 
-//
-// Know Issue: Zoom and Swipe will freeze frame
-//
-class GalleryDetailViewController: BaseViewController {
+final class GalleryDetailViewController: BaseViewController {
+
+  // MARK: - Private properties
   @IBOutlet private weak var galleryCollectionView: UICollectionView!
   @IBOutlet private weak var thumbCollectionView: UICollectionView!
 
   private var imageDataSource: [UIImage]?
-
   private var focusedCellIndex: Int? {
     didSet {
       handleSelection()
@@ -92,7 +90,7 @@ private extension GalleryDetailViewController {
   }
 
   private func initCollectionViews() {
-    galleryCollectionView.isPagingEnabled = true // if paging enabled, scrooToitem not workingl
+    galleryCollectionView.isPagingEnabled = true // if paging enabled, scrooToitem not working
     thumbCollectionView.contentInset = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 0)
     galleryCollectionView.showsHorizontalScrollIndicator = false
     galleryCollectionView.showsVerticalScrollIndicator = false
@@ -181,7 +179,10 @@ extension GalleryDetailViewController: UICollectionViewDelegate {
       previousCell?.isSelectedImage = false
 
       // Reset the zoom scale.
-      let mainCell = galleryCollectionView?.cellForItem(at: previousIndex) as? GalleryImageCell
+      let pmainCell = galleryCollectionView?.cellForItem(at: previousIndex) as? GalleryImageCell
+      pmainCell?.resetZoomScale()
+
+      let mainCell = galleryCollectionView?.cellForItem(at: indexPath) as? GalleryImageCell
       mainCell?.resetZoomScale()
     }
     let currentCell = collectionView.cellForItem(at: indexPath) as? GalleryThumbImageCell

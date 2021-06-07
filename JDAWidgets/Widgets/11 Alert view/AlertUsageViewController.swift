@@ -10,6 +10,10 @@ import Foundation
 import UIKit
 
 /// View Controller to test Alert View usage.
+// Enhancements:
+// Auto dismiss - option
+// Tap out side close - option
+
 class AlertUsageViewController: BaseViewController {
 
   lazy var exampleAlertView = ExampleAlertView.instance
@@ -31,7 +35,3 @@ class AlertUsageViewController: BaseViewController {
   }
 }
 
-// Closures must be week
-// Bottom to top.
-// optimize code
-//
