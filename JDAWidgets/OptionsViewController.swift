@@ -20,6 +20,7 @@ enum WidgetType: String, CaseIterable {
   case labelExtened = "9. Extended functional Labels"
   case galleryDetailedZoom = "10. Image Gallery with Thumbnail and Zoom support" // 10
   case customAlertView = "11. Any UIView into Custom Alert (100% with protocol extension)"
+  case stetchableHeaderTable = "12. Table with Custom(header) view - which can stretch to max height when scrolled down or Shrinks to min height when scrolled up."
 }
 
 class OptionViewController: UIViewController {
@@ -50,7 +51,7 @@ extension OptionViewController: UITableViewDelegate, UITableViewDataSource {
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     if let cell = tableView.dequeueReusableCell(withIdentifier: Constants.tableId) {
       cell.textLabel?.text = Constants.widgets[indexPath.row].rawValue
-      cell.textLabel?.numberOfLines = 3
+      cell.textLabel?.numberOfLines = 5
       cell.accessoryType = .disclosureIndicator
       return cell
     }
@@ -106,6 +107,8 @@ private extension OptionViewController {
     case .customAlertView:
       self.navigationController?.pushViewController(AlertUsageViewController(), animated: true)
 
+    case .stetchableHeaderTable:
+      self.navigationController?.pushViewController(StretchableTableViewController(), animated: true)
     }
   }
 
