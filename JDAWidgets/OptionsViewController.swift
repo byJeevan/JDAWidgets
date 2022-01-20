@@ -112,7 +112,8 @@ private extension OptionViewController {
       self.navigationController?.pushViewController(StretchableTableViewController(), animated: true)
       
     case .topicSelectionGrid:
-      self.navigationController?.pushViewController(TopicsGridMenuViewController(), animated: true)
+      let vc = TopicsGridMenuViewController(nibName: "TopicsGridMenuViewController", bundle: nil)
+      self.navigationController?.pushViewController(vc, animated: true)
 
     }
   }

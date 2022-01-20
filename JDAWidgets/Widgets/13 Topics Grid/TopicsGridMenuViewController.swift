@@ -14,9 +14,7 @@ final class TopicsGridMenuViewController: BaseViewController {
   // MARK: - Public properties
   @IBOutlet weak var topicGridContainerView: TopicsGridView!
   @IBOutlet weak var topicTableView: UITableView!
-
-//  private var tableView: UITableView = UITableView() //any style.
- 
+  
   // MARK: - View Controller Lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -26,18 +24,18 @@ final class TopicsGridMenuViewController: BaseViewController {
   // MARK: - Initialize UI Elements
   private func initUIElements() {
     // Adding table view
-//    self.tableView.frame = self.view.bounds
-//    self.view.addSubview(tableView)
     topicTableView.delegate = self
     topicTableView.dataSource = self
     topicTableView.tableFooterView = UIView()
-//    topicTableView.backgroundColor = UIColor.white
     topicTableView.register(UINib.init(nibName: "TopicGridSampleTableViewCell", bundle: .main), forCellReuseIdentifier: "TopicGridSampleTableViewCell")
     topicTableView.estimatedRowHeight = 50
     topicTableView.rowHeight = UITableView.automaticDimension
-    
   }
- 
+  
+  override func viewDidLayoutSubviews() {
+    super.viewDidLayoutSubviews()
+    topicTableView.reloadData() // important.
+  }
   
 }
 
@@ -52,14 +50,14 @@ extension TopicsGridMenuViewController: UITableViewDelegate, UITableViewDataSour
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "TopicGridSampleTableViewCell")!
-//    cell.setNeedsLayout()
-//    cell.layoutIfNeeded() //important // it's wrong 🔥
+    let cell = tableView.dequeueReusableCell(withIdentifier: "TopicGridSampleTableViewCell") as! TopicGridSampleTableViewCell
     return cell
   }
   
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     return UITableView.automaticDimension
   }
+  
+  
   
 }

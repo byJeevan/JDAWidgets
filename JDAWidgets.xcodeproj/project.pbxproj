@@ -68,6 +68,9 @@
 		43930E4427992D3A0051FFD2 /* TopicGridSampleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43930E4327992D3A0051FFD2 /* TopicGridSampleTableViewCell.xib */; };
 		43930E4627992D760051FFD2 /* TopicGridSampleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43930E4527992D760051FFD2 /* TopicGridSampleTableViewCell.swift */; };
 		43930E4827993CC70051FFD2 /* TopicsGridMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43930E4727993CC70051FFD2 /* TopicsGridMenuViewController.xib */; };
+		43930E4A2799486A0051FFD2 /* TopicsGridCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43930E492799486A0051FFD2 /* TopicsGridCollectionViewCell.swift */; };
+		43930E4C279973790051FFD2 /* LeftAlignedFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43930E4B279973790051FFD2 /* LeftAlignedFlowLayout.swift */; };
+		43930E4E279973950051FFD2 /* AutoSizedCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43930E4D279973950051FFD2 /* AutoSizedCollectionView.swift */; };
 		D5D13C2FD8FED1516473C0CE /* Pods_JDAWidgets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D57EAC4EED89223750F57710 /* Pods_JDAWidgets.framework */; };
 /* End PBXBuildFile section */
 
@@ -135,6 +138,9 @@
 		43930E4327992D3A0051FFD2 /* TopicGridSampleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopicGridSampleTableViewCell.xib; sourceTree = "<group>"; };
 		43930E4527992D760051FFD2 /* TopicGridSampleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicGridSampleTableViewCell.swift; sourceTree = "<group>"; };
 		43930E4727993CC70051FFD2 /* TopicsGridMenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopicsGridMenuViewController.xib; sourceTree = "<group>"; };
+		43930E492799486A0051FFD2 /* TopicsGridCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsGridCollectionViewCell.swift; sourceTree = "<group>"; };
+		43930E4B279973790051FFD2 /* LeftAlignedFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftAlignedFlowLayout.swift; sourceTree = "<group>"; };
+		43930E4D279973950051FFD2 /* AutoSizedCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoSizedCollectionView.swift; sourceTree = "<group>"; };
 		8921A403449CE710668D8042 /* Pods-JDAWidgets.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JDAWidgets.debug.xcconfig"; path = "Target Support Files/Pods-JDAWidgets/Pods-JDAWidgets.debug.xcconfig"; sourceTree = "<group>"; };
 		9E8A5A2DF7D1B98A60A48A42 /* Pods-JDAWidgets.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JDAWidgets.release.xcconfig"; path = "Target Support Files/Pods-JDAWidgets/Pods-JDAWidgets.release.xcconfig"; sourceTree = "<group>"; };
 		D57EAC4EED89223750F57710 /* Pods_JDAWidgets.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JDAWidgets.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -315,7 +321,6 @@
 		09D74A882444E1E400280E54 /* Widgets */ = {
 			isa = PBXGroup;
 			children = (
-				43930E3E279925250051FFD2 /* 13 Topics Grid */,
 				0925A5B3244B8F52004FD808 /* 1 Card View */,
 				09FF231F244B7D79000A298D /* 2 Floating Textfield */,
 				0925A5B4244C0F42004FD808 /* 3 Number Pad */,
@@ -328,6 +333,7 @@
 				0960FE57266B70E2001042E1 /* 10 Gallery Detail Zoom */,
 				09357B0B266C67F800B8A9F7 /* 11 Alert view */,
 				432D1CDF271F086B007EF088 /* 12 Stretchable table header  */,
+				43930E3E279925250051FFD2 /* 13 Topics Grid */,
 			);
 			path = Widgets;
 			sourceTree = "<group>";
@@ -384,6 +390,9 @@
 				43930E3C2799243F0051FFD2 /* TopicsGridMenuViewController.swift */,
 				43930E4527992D760051FFD2 /* TopicGridSampleTableViewCell.swift */,
 				43930E3F279925460051FFD2 /* TopicsGridView.swift */,
+				43930E4B279973790051FFD2 /* LeftAlignedFlowLayout.swift */,
+				43930E4D279973950051FFD2 /* AutoSizedCollectionView.swift */,
+				43930E492799486A0051FFD2 /* TopicsGridCollectionViewCell.swift */,
 				43930E4727993CC70051FFD2 /* TopicsGridMenuViewController.xib */,
 				43930E4127992C240051FFD2 /* TopicsGridCollectionViewCell.xib */,
 				43930E4327992D3A0051FFD2 /* TopicGridSampleTableViewCell.xib */,
@@ -563,7 +572,10 @@
 				09FF2321244B7D9B000A298D /* FloatingTextField.swift in Sources */,
 				090A65C8266CF408004A1AFC /* PageController+Helpers.swift in Sources */,
 				042FF043248FBA7C00D1B246 /* ExpandableTableViewController.swift in Sources */,
+				43930E4C279973790051FFD2 /* LeftAlignedFlowLayout.swift in Sources */,
 				09357AD9266B8A6900B8A9F7 /* PageIndexCollectionViewController.swift in Sources */,
+				43930E4E279973950051FFD2 /* AutoSizedCollectionView.swift in Sources */,
+				43930E4A2799486A0051FFD2 /* TopicsGridCollectionViewCell.swift in Sources */,
 				0925A5B8244C1018004FD808 /* GridStackView.swift in Sources */,
 				09357BAA266C6B7800B8A9F7 /* ExampleAlertView.swift in Sources */,
 				0960FEB2266B7693001042E1 /* GalleryImageCell.swift in Sources */,

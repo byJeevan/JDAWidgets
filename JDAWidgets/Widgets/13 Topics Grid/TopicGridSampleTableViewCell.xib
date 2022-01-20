@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TopicGridSampleTableViewCell" rowHeight="221" id="KwU-7I-Zdu" customClass="TopicGridSampleTableViewCell">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TopicGridSampleTableViewCell" rowHeight="221" id="KwU-7I-Zdu" customClass="TopicGridSampleTableViewCell" customModule="JDAWidgets" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="565" height="221"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KwU-7I-Zdu" id="rMh-t1-2mz">
@@ -20,18 +20,18 @@
                     <view contentMode="scaleToFill" verticalHuggingPriority="245" verticalCompressionResistancePriority="755" translatesAutoresizingMaskIntoConstraints="NO" id="mW3-Zl-b6E" customClass="TopicsGridView" customModule="JDAWidgets" customModuleProvider="target">
                         <rect key="frame" x="10" y="10" width="545" height="201"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
-                        <constraints>
-                            <constraint firstAttribute="height" priority="999" constant="400" placeholder="YES" id="OYL-iT-I4Q"/>
-                        </constraints>
                     </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="mW3-Zl-b6E" firstAttribute="top" secondItem="rMh-t1-2mz" secondAttribute="top" constant="10" id="BPp-EL-F3K"/>
                     <constraint firstItem="mW3-Zl-b6E" firstAttribute="leading" secondItem="rMh-t1-2mz" secondAttribute="leading" constant="10" id="E9y-Gr-BMj"/>
                     <constraint firstAttribute="trailing" secondItem="mW3-Zl-b6E" secondAttribute="trailing" constant="10" id="FzD-3c-vMG"/>
-                    <constraint firstAttribute="bottom" secondItem="mW3-Zl-b6E" secondAttribute="bottom" constant="10" id="mvZ-z0-CWR"/>
+                    <constraint firstAttribute="bottom" secondItem="mW3-Zl-b6E" secondAttribute="bottom" constant="10" id="g5M-TZ-KJP"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="topicGridContainerView" destination="mW3-Zl-b6E" id="jjD-fB-PyQ"/>
+            </connections>
             <point key="canvasLocation" x="245.6521739130435" y="-36.495535714285715"/>
         </tableViewCell>
     </objects>
