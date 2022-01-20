@@ -62,6 +62,12 @@
 		432D1CE3271F086B007EF088 /* StretchableContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432D1CE1271F086B007EF088 /* StretchableContainerView.swift */; };
 		432D1CE7271F08AC007EF088 /* LazyTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432D1CE5271F08AC007EF088 /* LazyTableViewModel.swift */; };
 		432D1CE8271F08AC007EF088 /* LazyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432D1CE6271F08AC007EF088 /* LazyTableViewController.swift */; };
+		43930E3D2799243F0051FFD2 /* TopicsGridMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43930E3C2799243F0051FFD2 /* TopicsGridMenuViewController.swift */; };
+		43930E40279925460051FFD2 /* TopicsGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43930E3F279925460051FFD2 /* TopicsGridView.swift */; };
+		43930E4227992C240051FFD2 /* TopicsGridCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43930E4127992C240051FFD2 /* TopicsGridCollectionViewCell.xib */; };
+		43930E4427992D3A0051FFD2 /* TopicGridSampleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43930E4327992D3A0051FFD2 /* TopicGridSampleTableViewCell.xib */; };
+		43930E4627992D760051FFD2 /* TopicGridSampleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43930E4527992D760051FFD2 /* TopicGridSampleTableViewCell.swift */; };
+		43930E4827993CC70051FFD2 /* TopicsGridMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43930E4727993CC70051FFD2 /* TopicsGridMenuViewController.xib */; };
 		D5D13C2FD8FED1516473C0CE /* Pods_JDAWidgets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D57EAC4EED89223750F57710 /* Pods_JDAWidgets.framework */; };
 /* End PBXBuildFile section */
 
@@ -123,6 +129,12 @@
 		432D1CE1271F086B007EF088 /* StretchableContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StretchableContainerView.swift; sourceTree = "<group>"; };
 		432D1CE5271F08AC007EF088 /* LazyTableViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LazyTableViewModel.swift; sourceTree = "<group>"; };
 		432D1CE6271F08AC007EF088 /* LazyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LazyTableViewController.swift; sourceTree = "<group>"; };
+		43930E3C2799243F0051FFD2 /* TopicsGridMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsGridMenuViewController.swift; sourceTree = "<group>"; };
+		43930E3F279925460051FFD2 /* TopicsGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsGridView.swift; sourceTree = "<group>"; };
+		43930E4127992C240051FFD2 /* TopicsGridCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopicsGridCollectionViewCell.xib; sourceTree = "<group>"; };
+		43930E4327992D3A0051FFD2 /* TopicGridSampleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopicGridSampleTableViewCell.xib; sourceTree = "<group>"; };
+		43930E4527992D760051FFD2 /* TopicGridSampleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicGridSampleTableViewCell.swift; sourceTree = "<group>"; };
+		43930E4727993CC70051FFD2 /* TopicsGridMenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopicsGridMenuViewController.xib; sourceTree = "<group>"; };
 		8921A403449CE710668D8042 /* Pods-JDAWidgets.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JDAWidgets.debug.xcconfig"; path = "Target Support Files/Pods-JDAWidgets/Pods-JDAWidgets.debug.xcconfig"; sourceTree = "<group>"; };
 		9E8A5A2DF7D1B98A60A48A42 /* Pods-JDAWidgets.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JDAWidgets.release.xcconfig"; path = "Target Support Files/Pods-JDAWidgets/Pods-JDAWidgets.release.xcconfig"; sourceTree = "<group>"; };
 		D57EAC4EED89223750F57710 /* Pods_JDAWidgets.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JDAWidgets.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -303,6 +315,7 @@
 		09D74A882444E1E400280E54 /* Widgets */ = {
 			isa = PBXGroup;
 			children = (
+				43930E3E279925250051FFD2 /* 13 Topics Grid */,
 				0925A5B3244B8F52004FD808 /* 1 Card View */,
 				09FF231F244B7D79000A298D /* 2 Floating Textfield */,
 				0925A5B4244C0F42004FD808 /* 3 Number Pad */,
@@ -363,6 +376,19 @@
 				432D1CE6271F08AC007EF088 /* LazyTableViewController.swift */,
 			);
 			path = "5 Pagination TableView";
+			sourceTree = "<group>";
+		};
+		43930E3E279925250051FFD2 /* 13 Topics Grid */ = {
+			isa = PBXGroup;
+			children = (
+				43930E3C2799243F0051FFD2 /* TopicsGridMenuViewController.swift */,
+				43930E4527992D760051FFD2 /* TopicGridSampleTableViewCell.swift */,
+				43930E3F279925460051FFD2 /* TopicsGridView.swift */,
+				43930E4727993CC70051FFD2 /* TopicsGridMenuViewController.xib */,
+				43930E4127992C240051FFD2 /* TopicsGridCollectionViewCell.xib */,
+				43930E4327992D3A0051FFD2 /* TopicGridSampleTableViewCell.xib */,
+			);
+			path = "13 Topics Grid";
 			sourceTree = "<group>";
 		};
 		650EE429D7315E58570B43EE /* Pods */ = {
@@ -434,8 +460,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43930E4227992C240051FFD2 /* TopicsGridCollectionViewCell.xib in Resources */,
 				09357AF5266BCCC000B8A9F7 /* PageController.xib in Resources */,
+				43930E4427992D3A0051FFD2 /* TopicGridSampleTableViewCell.xib in Resources */,
 				09357AED266B9A0F00B8A9F7 /* PageContainerVC.xib in Resources */,
+				43930E4827993CC70051FFD2 /* TopicsGridMenuViewController.xib in Resources */,
 				09D74A812444E00E00280E54 /* LaunchScreen.storyboard in Resources */,
 				042FF04D248FC69100D1B246 /* CollapsibleTableViewHeader.xib in Resources */,
 				09357BAD266C6BFA00B8A9F7 /* ExampleAlertView.xib in Resources */,
@@ -504,10 +533,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				042FF047248FBC7800D1B246 /* CollapsibleHeaderViewModel.swift in Sources */,
+				43930E4627992D760051FFD2 /* TopicGridSampleTableViewCell.swift in Sources */,
 				0929066F2530CB930008C80C /* ExtendedLabelVC.swift in Sources */,
 				09357BA7266C6AE000B8A9F7 /* AlertConfigurations.swift in Sources */,
 				0926F3132528356D008FACFD /* DemoTableCellView.swift in Sources */,
 				09D74A792444E00D00280E54 /* OptionsViewController.swift in Sources */,
+				43930E3D2799243F0051FFD2 /* TopicsGridMenuViewController.swift in Sources */,
 				432D1CE7271F08AC007EF088 /* LazyTableViewModel.swift in Sources */,
 				0925A5B0244B8455004FD808 /* FloatingTextFieldTestVC.swift in Sources */,
 				042FF04B248FBE0200D1B246 /* ExpandableTableViewModel.swift in Sources */,
@@ -539,6 +570,7 @@
 				09357ADC266B8AD100B8A9F7 /* PageContainerVC.swift in Sources */,
 				0926F3152528359C008FACFD /* DemoHeaderFooterView.swift in Sources */,
 				0960FE5B266B71B6001042E1 /* GalleryDetailViewController.swift in Sources */,
+				43930E40279925460051FFD2 /* TopicsGridView.swift in Sources */,
 				0926F30F25283068008FACFD /* BaseMVVMTableViewModel.swift in Sources */,
 				0443AA3B24FC1A9900FA6CEE /* InBornViewController.swift in Sources */,
 				0925A5B2244B88BD004FD808 /* Extensions.swift in Sources */,

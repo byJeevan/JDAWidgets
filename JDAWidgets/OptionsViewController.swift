@@ -21,6 +21,7 @@ enum WidgetType: String, CaseIterable {
   case galleryDetailedZoom = "10. Image Gallery with Thumbnail and Zoom support" // 10
   case customAlertView = "11. Any UIView into Custom Alert (100% with protocol extension)"
   case stetchableHeaderTable = "12. Table with Custom(header) view - which can stretch to max height when scrolled down or Shrinks to min height when scrolled up."
+  case topicSelectionGrid = "13. Topics are displayed as grid and when it overflows a new row created."
 }
 
 class OptionViewController: UIViewController {
@@ -109,6 +110,10 @@ private extension OptionViewController {
 
     case .stetchableHeaderTable:
       self.navigationController?.pushViewController(StretchableTableViewController(), animated: true)
+      
+    case .topicSelectionGrid:
+      self.navigationController?.pushViewController(TopicsGridMenuViewController(), animated: true)
+
     }
   }
 

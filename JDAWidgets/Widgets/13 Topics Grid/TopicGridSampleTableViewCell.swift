@@ -1,0 +1,30 @@
+//
+//  TopicGridSampleTableViewCell.swift
+//  JDAWidgets
+//
+//  Created by Jeevan Rao on 20/01/22.
+//  Copyright © 2022 jda. All rights reserved.
+//
+
+import UIKit
+
+final class TopicGridSampleTableViewCell: UITableViewCell {
+  
+  @IBOutlet weak var topicGridContainerView: TopicsGridView!
+  
+  override func didMoveToSuperview() {
+    super.didMoveToSuperview()
+    layoutIfNeeded()
+ 
+  }
+  
+  override func layoutSubviews() {
+    super.layoutSubviews()
+  }
+  
+  override func prepareForReuse() {
+    super.prepareForReuse()
+    topicGridContainerView.layoutSubviews()
+  }
+  
+}
