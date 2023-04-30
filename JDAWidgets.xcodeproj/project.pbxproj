@@ -58,6 +58,8 @@
 		09D74A812444E00E00280E54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09D74A7F2444E00E00280E54 /* LaunchScreen.storyboard */; };
 		09D74A8B2444E31800280E54 /* WidgetCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D74A8A2444E31800280E54 /* WidgetCardViewController.swift */; };
 		09FF2321244B7D9B000A298D /* FloatingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FF2320244B7D9B000A298D /* FloatingTextField.swift */; };
+		4313B3B329E2FE060046B337 /* BeforeAfterSliderExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4313B3B229E2FE060046B337 /* BeforeAfterSliderExampleViewController.swift */; };
+		4313B3B529E307770046B337 /* BeforeAfterImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4313B3B429E307770046B337 /* BeforeAfterImageView.swift */; };
 		432D1CE2271F086B007EF088 /* StretchableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432D1CE0271F086B007EF088 /* StretchableTableViewController.swift */; };
 		432D1CE3271F086B007EF088 /* StretchableContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432D1CE1271F086B007EF088 /* StretchableContainerView.swift */; };
 		432D1CE7271F08AC007EF088 /* LazyTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432D1CE5271F08AC007EF088 /* LazyTableViewModel.swift */; };
@@ -128,6 +130,8 @@
 		09D74A822444E00E00280E54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09D74A8A2444E31800280E54 /* WidgetCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetCardViewController.swift; sourceTree = "<group>"; };
 		09FF2320244B7D9B000A298D /* FloatingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTextField.swift; sourceTree = "<group>"; };
+		4313B3B229E2FE060046B337 /* BeforeAfterSliderExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeforeAfterSliderExampleViewController.swift; sourceTree = "<group>"; };
+		4313B3B429E307770046B337 /* BeforeAfterImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeforeAfterImageView.swift; sourceTree = "<group>"; };
 		432D1CE0271F086B007EF088 /* StretchableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StretchableTableViewController.swift; sourceTree = "<group>"; };
 		432D1CE1271F086B007EF088 /* StretchableContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StretchableContainerView.swift; sourceTree = "<group>"; };
 		432D1CE5271F08AC007EF088 /* LazyTableViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LazyTableViewModel.swift; sourceTree = "<group>"; };
@@ -334,6 +338,7 @@
 				09357B0B266C67F800B8A9F7 /* 11 Alert view */,
 				432D1CDF271F086B007EF088 /* 12 Stretchable table header  */,
 				43930E3E279925250051FFD2 /* 13 Topics Grid */,
+				4313B3B129E2FDC80046B337 /* 14 BeforeAfter Slider */,
 			);
 			path = Widgets;
 			sourceTree = "<group>";
@@ -364,6 +369,15 @@
 				D57EAC4EED89223750F57710 /* Pods_JDAWidgets.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4313B3B129E2FDC80046B337 /* 14 BeforeAfter Slider */ = {
+			isa = PBXGroup;
+			children = (
+				4313B3B429E307770046B337 /* BeforeAfterImageView.swift */,
+				4313B3B229E2FE060046B337 /* BeforeAfterSliderExampleViewController.swift */,
+			);
+			path = "14 BeforeAfter Slider";
 			sourceTree = "<group>";
 		};
 		432D1CDF271F086B007EF088 /* 12 Stretchable table header  */ = {
@@ -557,10 +571,12 @@
 				0929066C2530CAC00008C80C /* BaseViewController.swift in Sources */,
 				042FF049248FBCE300D1B246 /* Binding.swift in Sources */,
 				09357B0D266C683C00B8A9F7 /* AlertUsageViewController.swift in Sources */,
+				4313B3B329E2FE060046B337 /* BeforeAfterSliderExampleViewController.swift in Sources */,
 				432D1CE3271F086B007EF088 /* StretchableContainerView.swift in Sources */,
 				0960FEB8266B76EF001042E1 /* GalleryThumbImageCell.swift in Sources */,
 				09357AEA266B987D00B8A9F7 /* IndexCollectionViewCell.swift in Sources */,
 				0960FEC3266B7BE8001042E1 /* Constants.swift in Sources */,
+				4313B3B529E307770046B337 /* BeforeAfterImageView.swift in Sources */,
 				0926F311252830F8008FACFD /* BaseTableProtocol.swift in Sources */,
 				432D1CE2271F086B007EF088 /* StretchableTableViewController.swift in Sources */,
 				092906742530D8030008C80C /* InteractiveLinkLabel.swift in Sources */,
