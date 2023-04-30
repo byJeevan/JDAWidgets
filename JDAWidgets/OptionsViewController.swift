@@ -22,6 +22,8 @@ enum WidgetType: String, CaseIterable {
   case customAlertView = "11. Any UIView into Custom Alert (100% with protocol extension)"
   case stetchableHeaderTable = "12. Table with Custom(header) view - which can stretch to max height when scrolled down or Shrinks to min height when scrolled up."
   case topicSelectionGrid = "13. Topics are displayed as grid and when it overflows a new row created."
+  case beforeAfterSlider = "14. Before After Image Slider"
+
 }
 
 class OptionViewController: UIViewController {
@@ -114,6 +116,10 @@ private extension OptionViewController {
     case .topicSelectionGrid:
       let vc = TopicsGridMenuViewController(nibName: "TopicsGridMenuViewController", bundle: nil)
       self.navigationController?.pushViewController(vc, animated: true)
+
+    case .beforeAfterSlider:
+        let vc = BeforeAfterSliderExampleViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
 
     }
   }
